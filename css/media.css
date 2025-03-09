@@ -37,3 +37,10 @@
         justify-content: center !important;
     }
 }
+
+
+@media (max-width: 768px) {
+    .image-box {
+        height: 180px; /* Reduce height for smaller screens */
+    }
+}

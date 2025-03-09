@@ -211,3 +211,159 @@ body {
 }
 
 
+
+
+.breadcrumb {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: -50px; /* Move more to the left */
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: black;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    padding: 0 5px;
+}
+
+/* Shop Categories Title moved more to the left */
+.shop-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: -30px; /* Adjusted to move left */
+}
+
+/* Brand Logos Styling */
+.brand-logos img {
+    max-width: 400px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.brand-logos img:hover {
+    opacity: 1;
+}
+
+
+
+
+/* .fixed-box {
+    width: 200px; 
+    height: 200px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; 
+    border: 1px solid #ddd; 
+    border-radius: 40px; 
+    box-shadow: 2px 2px 10px rgba(236, 17, 17, 0.933); 
+    padding: 10px; 
+}
+
+.fixed-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+} */
+
+/* for the caterigers with nav links */
+.card-box {
+    padding: 20px;
+    height: 100%;
+    min-height: 450px;
+    
+}
+.image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; 
+    padding: 15px;
+    border-radius: 2px;
+  
+}
+
+.image-box img {
+    max-width: 100%; 
+    max-height: 100%;
+    height: 100%; 
+    object-fit: contain; 
+    transition: transform 0.4s ease-in-out;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+   
+}
+
+/* ********************************************************************************** */
+
+
+.text-box {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-box h4 {
+    min-height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-box ul {
+    flex-grow: 1;
+}
+
+
+
+.small-space {
+    width: 2px; 
+}
+.content-area {
+    flex: 1;
+}
+
+
+
+/* Style for the list items */
+.text-box ul li a {
+    color: #333D4C !important; 
+    font-size: 18px; 
+    padding-left: 1rem;
+   
+    position: relative;
+    text-decoration: none; 
+    padding-bottom: 5px; 
+   
+}
+
+/* Underline Animation */
+.text-box ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(159, 159, 159); 
+    transition: width 0.2s ease-in-out ;
+}
+
+/* Expand underline on hover */
+.text-box ul li a:hover::after {
+    width: 100%;
+}
+
+.video-circle {
+    width: 400px;  
+    height: 200px;
+    border-radius: 90%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0);
+}
