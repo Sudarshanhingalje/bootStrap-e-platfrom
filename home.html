@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
 
@@ -18,7 +23,529 @@
 
 <body>
 
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark d-block z-fixed p-1"
+        data-sticky-navbar="{&quot;offset&quot;: 200}">
+        <div class="container py-1 py-lg-3" data-bs-theme="dark">
+            <div class="navbar-stuck-hide pt-1"></div>
+            <div class="row flex-nowrap d-flex align-items-center">
+
+
+                <div class="col col-lg-3 d-flex align-items-center">
+
+                    <!-- Mobile Menu Button -->
+                    <button type="button" class="navbar-toggler me-4 me-lg-0" data-bs-toggle="offcanvas"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Brand Logo -->
+                    <a href="index.html" class="navbar-brand me-0 d-flex align-items-center flex-shrink-0 ">
+                        <span class="d-none d-sm-flex flex-shrink-0 text-primary me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                                class="bi bi-shop-window" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
+                            </svg>
+                        </span>
+                        <span class="text-white fs-1 fw-bold lh-1 pe-none">Trendora</span>
+                    </a>
+                </div>
+
+                <!-- Right Section: Search Bar & Icons -->
+                <div class="col col-lg-9 d-flex align-items-center justify-content-end ">
+
+                    <!-- Search Bar -->
+                    <div class="d-none d-lg-flex align-items-center w-150 me-3">
+                        <input class="form-control me-2 rounded-pill fs-4 fw-bold lh-1 text-truncate" type="text"
+                            style="width: 300px;" placeholder="search the prouduct">
+                        <button class="btn btn-primary rounded-pill fs-2 fw-bold lh-1" type="button">Search</button>
+                    </div>
+
+                    <!-- Icons: User, Wishlist, Cart -->
+
+                    <a href="#"
+                        class="d-none d-xl-flex align-items-center text-decoration-none text-white animate-shake p-4 rounded mb-2">
+
+                        <!-- sale icon -->
+                        <div
+                            class="btn btn-icon btn-lg fs-lg  text-primary bg-body-secondary bg-opacity-80 pe-none rounded-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red"
+                                class="bi bi-percent" viewBox="0 0 16 16">
+                                <path
+                                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                            </svg>
+                        </div>
+                        <div class="ps-2 text-nowrap">
+
+                            <div class="fs-xs text-body  fs-6">Only this month</div>
+                            <div style="display: inline;" class="fw-semibold text-white fs-5">Super Sale 20%</div>
+
+                        </div>
+
+                    </a>
+
+                    <!-- four buuton created -->
+                    <div class="container d-flex ">
+                        <div class="d-flex align-items-center justify-content-between px-3">
+
+                            <!-- Navbar stuck nav toggler -->
+                            <button type="button" class="navbar-toggler d-none navbar-stuck-show me-3 "
+                                data-bs-toggle="collapse" data-bs-target="#stuckNav" aria-controls="stuckNav"
+                                aria-expanded="false" aria-label="Toggle navigation in navbar stuck state">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- Theme switcher (light/dark/auto) -->
+                            <div class="dropdown">
+                                <button type="button"
+                                    class="theme-switcher btn btn-icon btn-lg btn-outline-secondary fs-lg border-0 rounded-circle animate-scale"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (light)">
+                                    <span class="theme-icon-active d-flex animate-target">
+                                        <i class="bi bi-sun fs-1"></i>
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu" style="--cz-dropdown-min-width: 9rem">
+                                    <li>
+                                        <button type="button" class="dropdown-item active" data-bs-theme-value="light"
+                                            aria-pressed="true">
+                                            <span class="theme-icon d-flex fs-base me-2">
+                                                <i class="bi bi-sun fs-1"></i>
+                                            </span>
+                                            <span class="theme-label">Light</span>
+                                            <i class="item-active-indicator bi bi-check ms-auto"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item" data-bs-theme-value="dark"
+                                            aria-pressed="false">
+                                            <span class="theme-icon d-flex fs-base me-2">
+                                                <i class="bi bi-moon"></i>
+                                            </span>
+                                            <span class="theme-label">Dark</span>
+                                            <i class="item-active-indicator bi bi-check ms-auto"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item" data-bs-theme-value="auto"
+                                            aria-pressed="false">
+                                            <span class="theme-icon d-flex fs-base me-2">
+                                                <i class="bi bi-automobile"></i>
+                                            </span>
+                                            <span class="theme-label">Auto</span>
+                                            <i class="item-active-indicator bi bi-check ms-auto"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+                            <!-- Account button visible on screens > 768px wide (md breakpoint) -->
+                            <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex"
+                                href="account-signin.html">
+                                <i class="bi bi-person animate-target fs-1"></i>
+                                <span class="visually-hidden ">Account</span>
+                            </a>
+
+                            <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
+                            <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex"
+                                href="account-wishlist.html">
+                                <i class="bi bi-heart animate-target fs-1"></i>
+                                <span class="visually-hidden">Wishlist</span>
+                            </a>
+
+                            <!-- Cart button -->
+                            <button type="button"
+                                class="btn btn-icon btn-lg btn-secondary position-relative rounded-circle ms-2"
+                                data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart"
+                                aria-label="Shopping cart">
+                                <span
+                                    class="position-absolute top-0 start-100 mt-n1 ms-n3 badge text-bg-success border border-3 border-dark rounded-pill fs-6"
+                                    style="--cz-badge-padding-y: .25em; --cz-badge-padding-x: .42em">0</span>
+                                <span
+                                    class="position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 rounded-circle animate-slide-end fs-lg">
+                                    <i class="bi bi-cart animate-target ms-n1 fs-1"></i>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- <div class="container mt-4">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle w-100" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-th"></i> Categories
+            </button>
+            <div class="dropdown-menu category-menu" aria-labelledby="categoryDropdown">
+    
+                
+                <div class="category-item">
+                    <span><i class="fas fa-laptop"></i> Computers & Accessories</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Computers & Accessories</h6>
+                        <ul class="submenu-list">
+                            <li>Laptops</li>
+                            <li>Desktops</li>
+                            <li>PC Components</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                
+                <div class="category-item">
+                    <span><i class="fas fa-tablet-alt"></i> Smartphones & Tablets</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Smartphones & Tablets</h6>
+                        <ul class="submenu-list">
+                            <li>Samsung</li>
+                            <li>Apple</li>
+                            <li>OnePlus</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                
+                <div class="category-item">
+                    <span><i class="fas fa-tv"></i> TV, Video & Audio</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>TV, Video & Audio</h6>
+                        <ul class="submenu-list">
+                            <li>Smart TVs</li>
+                            <li>Sound Systems</li>
+                            <li>Projectors</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                
+                <div class="category-item">
+                    <span><i class="fas fa-music"></i> Speakers & Home Music</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Speakers & Home Music</h6>
+                        <ul class="submenu-list">
+                            <li>Bluetooth Speakers</li>
+                            <li>Home Theater</li>
+                            <li>Soundbars</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                
+                <div class="category-item">
+                    <span><i class="fas fa-camera"></i> Cameras, Photo & Video</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Cameras, Photo & Video</h6>
+                        <ul class="submenu-list">
+                            <li>DSLR Cameras</li>
+                            <li>Mirrorless Cameras</li>
+                            <li>Camera Accessories</li>
+                        </ul>
+                    </div>
+                </div>
+    
+              
+                <div class="category-item">
+                    <span><i class="fas fa-print"></i> Printers & Ink</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Printers & Ink</h6>
+                        <ul class="submenu-list">
+                            <li>Inkjet Printers</li>
+                            <li>Laser Printers</li>
+                            <li>Printer Accessories</li>
+                        </ul>
+                    </div>
+                </div>
+    
+              
+                <div class="category-item">
+                    <span><i class="fas fa-charging-station"></i> Charging Stations</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Charging Stations</h6>
+                        <ul class="submenu-list">
+                            <li>Wireless Chargers</li>
+                            <li>Multi-device Chargers</li>
+                            <li>Power Hubs</li>
+                        </ul>
+                    </div>
+                </div>
+    
+               
+                <div class="category-item">
+                    <span><i class="fas fa-headphones"></i> Headphones</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Headphones</h6>
+                        <ul class="submenu-list">
+                            <li>Wireless Headphones</li>
+                            <li>Noise Cancelling</li>
+                            <li>Gaming Headsets</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                
+                <div class="category-item">
+                    <span><i class="fas fa-clock"></i> Wearable Electronics</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Wearable Electronics</h6>
+                        <ul class="submenu-list">
+                            <li>Smartwatches</li>
+                            <li>Fitness Trackers</li>
+                            <li>VR Headsets</li>
+                        </ul>
+                    </div>
+                </div>
+    
+               
+                <div class="category-item">
+                    <span><i class="fas fa-battery-full"></i> Powerbanks</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Powerbanks</h6>
+                        <ul class="submenu-list">
+                            <li>Fast Charging Powerbanks</li>
+                            <li>Wireless Powerbanks</li>
+                            <li>Solar Powerbanks</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                
+                <div class="category-item">
+                    <span><i class="fas fa-hdd"></i> HDD/SSD Data Storage</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>HDD/SSD Data Storage</h6>
+                        <ul class="submenu-list">
+                            <li>External Hard Drives</li>
+                            <li>Internal SSDs</li>
+                            <li>USB Flash Drives</li>
+                        </ul>
+                    </div>
+                </div>
+    
+              
+                <div class="category-item">
+                    <span><i class="fas fa-gamepad"></i> Video Games</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="submenu">
+                        <h6>Video Games</h6>
+                        <ul class="submenu-list">
+                            <li>PlayStation</li>
+                            <li>Xbox</li>
+                            <li>PC Games</li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div> --->
+
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner " style="background-color: #9bbffa;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+              </div>
+            <!-- Slide 1 -->
+            <div class="carousel-item active" data-bs-interval="2000">
+                <section class="container">
+                    <div class="row align-items-center">
+                        <!-- Left Column: Text Content -->
+                        <div class="col-md-6 text-start">
+                            <h3 class="sub-heading mb-2 text-secondary">Feel the real quality of sound</h3>
+                            <h1 class="main-heading display-1 mb-4 fw-bold lh-1">Headphones</h1>
+                            <h2 class="product-name display-3 mb-5 fw-bold lh-1">ProMax</h2>
+                            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" class="btn btn-danger fs-2 rounded" style="background-color:rgb(255, 8, 82);">Shop now <i class="bi bi-cart4"></i></a>
+                        </div>
+    
+                        <!-- Right Column: Image -->
+                        <div class="col-md-6 text-center">
+                            <img class="product-image img-fluid" src="../images/landingpage/01.png" alt="Headphones">
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+            <!-- Slide 2 -->
+            <div class="carousel-item" data-bs-interval="2000">
+                <section class="container">
+                    <div class="row align-items-center">
+                        <!-- Left Column: Text Content -->
+                        <div class="col-md-6 text-start">
+                            <h3 class="sub-heading mb-2 text-secondary">Deal of the week</h3>
+                            <h1 class="main-heading display-1 mb-4 fw-bold lh-1">Powerful</h1>
+                            <h2 class="product-name display-3 mb-5 fw-bold lh-1">iPad Pro Max</h2>
+                            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" class="btn btn-danger fs-2 rounded" style="background-color:rgb(255, 8, 82);">Shop now <i class="bi bi-cart4"></i></a>
+                        </div>
+    
+                        <!-- Right Column: Image -->
+                        <div class="col-md-6 text-center">
+                            <img class="product-image img-fluid" src="../images/landingpage/02.png" alt="iPad Pro Max">
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+            <!-- Slide 3 -->
+            <div class="carousel-item" data-bs-interval="2000">
+                <section class="container">
+                    <div class="row align-items-center">
+                        <!-- Left Column: Text Content -->
+                        <div class="col-md-6 text-start">
+                            <h3 class="sub-heading mb-2 text-secondary">Virtual Reality Glasses</h3>
+                            <h1 class="main-heading display-1 mb-4 fw-bold lh-1">Experience</h1>
+                            <h2 class="product-name display-3 mb-5 fw-bold lh-1">New Reality</h2>
+                            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" class="btn btn-danger fs-2 rounded"  style="background-color:rgb(255, 8, 82);">Shop now <i class="bi bi-cart4"></i></a>
+                        </div>
+    
+                        <!-- Right Column: Image -->
+                        <div class="col-md-6 text-center">
+                            <img class="product-image img-fluid" src="../images/landingpage/03.png" alt="VR Glasses">
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid mt-4 px-5">
+    <div class="row">
+        <!-- Breadcrumb - Moves Right on Larger Screens -->
+        <div class="col-12 text-md-end text-start fs-5">
+            <nav class="breadcrumb">
+                <span class="text-dark">Home > </span> 
+                <span class="breadcrumb-item text-secondary ps-2">Categories</span>
+            </nav>
+        </div>
+
+        <!-- Shop Categories Title - Center on Small Screens, Left on Large -->
+        <div class="col-12 text-md-start text-center">
+            <h2 class="shop-title fw-bold">Shop Categories</h2>
+        </div>
+
+        <!-- Brand Logos - 2 per row on mobile, 6 per row on large screens -->
+        <div class="col-12 mt-3">
+            <div class="row brand-logos justify-content-center text-center">
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+                    <img src="../../images/brandNames/apple.svg" class="img-fluid w-100 h-auto" alt="Apple">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+                    <img src="../../images/brandNames/motorola.svg" class="img-fluid w-100 h-auto" alt="Motorola">
+                     </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+                    <img src="../../images/brandNames/xiaomi.svg" class="img-fluid w-100 h-auto" alt="Xiaomi">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+                    <img src="../../images/brandNames/canon.svg" class="img-fluid w-100 h-auto" alt="Canon">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+                    <img src="../../images/brandNames/samsung.svg" class="img-fluid w-100 h-auto" alt="Samsung">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                   <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+                    <img src="../../images/brandNames/sony.svg" class="img-fluid w-100 h-auto" alt="Sony">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-12 mt-3">
+    <div class="row brand-logos justify-content-center text-center">
+        <div class="col-4 col-md-4 col-lg-2 mb-3">
+            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+            <img src="../../images/Categories/Smartphone/01.png" class="img-fluid w-100 h-auto" alt="Apple">
+            </a>
+        </div>
+        <div class="col-4 col-md-4 col-lg-2 mb-3">
+            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+            <img src="../../images/brandNames/motorola.svg" class="img-fluid w-100 h-auto" alt="Motorola">
+             </a>
+        </div>
+        <div class="col-4 col-md-4 col-lg-2 mb-3">
+            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+            <img src="../../images/brandNames/xiaomi.svg" class="img-fluid w-100 h-auto" alt="Xiaomi">
+            </a>
+        </div>
+        <div class="col-4 col-md-4 col-lg-2 mb-3">
+            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+            <img src="../../images/brandNames/canon.svg" class="img-fluid w-100 h-auto" alt="Canon">
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 mb-3">
+            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+            <img src="../../images/brandNames/samsung.svg" class="img-fluid w-100 h-auto" alt="Samsung">
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 mb-3">
+           <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
+            <img src="../../images/brandNames/sony.svg" class="img-fluid w-100 h-auto" alt="Sony">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+                
+                       
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

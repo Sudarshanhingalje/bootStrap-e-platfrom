@@ -1,1 +1,39 @@
 /* adjust reamaing css here  */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+    
+    .feature-box {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    .hero p {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 768px) { /* For mobile devices */
+    .mobile-lower {
+        margin-top: 50px; /* Move the image lower */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .breadcrumb,
+    .shop-title {
+        margin-left: 0; /* Reset for mobile */
+        text-align: center;
+    }
+    .brand-logos {
+        justify-content: center !important;
+    }
+}
