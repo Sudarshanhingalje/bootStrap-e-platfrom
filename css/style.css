@@ -384,3 +384,8 @@ footer .btn {
 .text-aera ul li a:hover::after {
     width: 100%;
 }
+
+
+.dropdown-menu .dropdown-item {
+    color: black !important;
+}
