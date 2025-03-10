@@ -11,6 +11,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+   
 
 
     <!-- font link -->
@@ -27,23 +28,24 @@
 
 <body>
 
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark d-block z-fixed p-1"
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark d-block  py-0 px-5"
         data-sticky-navbar="{&quot;offset&quot;: 200}">
+
         <div class="container py-1 py-lg-3" data-bs-theme="dark">
             <div class="navbar-stuck-hide pt-1"></div>
             <div class="row flex-nowrap d-flex align-items-center">
 
 
-                <div class="col col-lg-3 d-flex align-items-center">
+                <div class="col col-lg-3 d-flex align-items-center justify-content-start">
 
                     <!-- Mobile Menu Button -->
-                    <button type="button" class="navbar-toggler me-4 me-lg-0" data-bs-toggle="offcanvas"
+                    <button type="button" class="navbar-toggler me-auto" data-bs-toggle="offcanvas"
                         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!-- Brand Logo -->
-                    <a href="index.html" class="navbar-brand me-0 d-flex align-items-center flex-shrink-0 ">
+                    <a href="index.html" class="navbar-brand me-0  ms-2 d-flex align-items-center flex-shrink-0 ">
                         <span class="d-none d-sm-flex flex-shrink-0 text-primary me-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
                                 class="bi bi-shop-window" viewBox="0 0 16 16">
@@ -358,89 +360,91 @@
 
                 </div>
             </div>
-        </div> -
+        </div>
 
     </header>
 
 
+    <!-- *********************************************************************************************************************************************** -->
 
-
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner " style="background-color: #9bbffa;">
+    <section id="productCarousel" class="carousel slide py-5 px-md-5" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-5" style="background-color: #9bbffa; padding: 0px 8px;">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
             </div>
-            <!-- Slide 1 -->
-            <div class="carousel-item active" data-bs-interval="2000">
+
+            <!-- Slide Template -->
+            <div class="carousel-item active" data-bs-interval="3000">
                 <section class="container">
-                    <div class="row align-items-center">
-                        <!-- Left Column: Text Content -->
-                        <div class="col-md-6 text-start">
-                            <h3 class="sub-heading mb-2 text-secondary">Feel the real quality of sound</h3>
-                            <h1 class="main-heading display-1 mb-4 fw-bold lh-1">Headphones</h1>
-                            <h2 class="product-name display-3 mb-5 fw-bold lh-1">ProMax</h2>
+                    <div class="row d-flex align-items-center text-md-start text-center ">
+                        <div class="col-md-6 pt-5">
+                            <h3 class="sub-heading mb-3 text-secondary fs-5">Feel the real quality of sound</h3>
+                            <h1 class="main-heading fw-bold lh-1 display-4 display-md-3">Headphones</h1>
+                            <h2 class="product-name fw-bold lh-1 display-5 display-md-4">ProMax</h2>
                             <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom"
-                                class="btn btn-danger fs-2 rounded" style="background-color:rgb(255, 8, 82);">Shop now
-                                <i class="bi bi-cart4"></i></a>
+                                class="btn btn-danger rounded py-2 px-4 mt-3 fs-5 fs-md-4">Shop now <i
+                                    class="bi bi-cart4"></i></a>
                         </div>
 
-                        <!-- Right Column: Image -->
                         <div class="col-md-6 text-center">
-                            <img class="product-image img-fluid" src="/images/landingpage/01.png" alt="Headphones">
+                            <img class="product-image img-fluid w-100 h-auto" style="max-width: 400px;"
+                                src="/images/landingpage/01.png" alt="Headphones">
                         </div>
                     </div>
                 </section>
             </div>
 
             <!-- Slide 2 -->
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item" data-bs-interval="3000">
                 <section class="container">
-                    <div class="row align-items-center">
-                        <!-- Left Column: Text Content -->
-                        <div class="col-md-6 text-start">
-                            <h3 class="sub-heading mb-2 text-secondary">Deal of the week</h3>
-                            <h1 class="main-heading display-1 mb-4 fw-bold lh-1">Powerful</h1>
-                            <h2 class="product-name display-3 mb-5 fw-bold lh-1">iPad Pro Max</h2>
+                    <div class="row d-flex align-items-center text-md-start text-center">
+                        <div class="col-md-6 pt-5">
+                            <h3 class="sub-heading mb-3 text-secondary fs-5">Deal of the week</h3>
+                            <h1 class="main-heading fw-bold lh-1 display-4 display-md-3">Powerful</h1>
+                            <h2 class="product-name fw-bold lh-1 display-5 display-md-4">iPad Pro Max</h2>
                             <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom"
-                                class="btn btn-danger fs-2 rounded" style="background-color:rgb(255, 8, 82);">Shop now
-                                <i class="bi bi-cart4"></i></a>
+                                class="btn btn-danger rounded py-2 px-4 mt-3 fs-5 fs-md-4">Shop now <i
+                                    class="bi bi-cart4"></i></a>
                         </div>
 
-                        <!-- Right Column: Image -->
                         <div class="col-md-6 text-center">
-                            <img class="product-image img-fluid" src="/images/landingpage/02.png" alt="iPad Pro Max">
+                            <img class="product-image img-fluid w-100 h-auto" style="max-width: 400px;"
+                                src="/images/landingpage/02.png" alt="iPad Pro Max">
                         </div>
                     </div>
                 </section>
             </div>
 
             <!-- Slide 3 -->
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item" data-bs-interval="3000">
                 <section class="container">
-                    <div class="row align-items-center">
-                        <!-- Left Column: Text Content -->
-                        <div class="col-md-6 text-start">
-                            <h3 class="sub-heading mb-2 text-secondary">Virtual Reality Glasses</h3>
-                            <h1 class="main-heading display-1 mb-4 fw-bold lh-1">Experience</h1>
-                            <h2 class="product-name display-3 mb-5 fw-bold lh-1">New Reality</h2>
+                    <div class="row d-flex align-items-center text-md-start text-center">
+                        <div class="col-md-6 pt-5">
+                            <h3 class="sub-heading mb-3 text-secondary fs-5">Virtual Reality Glasses</h3>
+                            <h1 class="main-heading fw-bold lh-1 display-4 display-md-3">Experience</h1>
+                            <h2 class="product-name fw-bold lh-1 display-5 display-md-4">New Reality</h2>
                             <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom"
-                                class="btn btn-danger fs-2 rounded" style="background-color:rgb(255, 8, 82);">Shop now
-                                <i class="bi bi-cart4"></i></a>
+                                class="btn btn-danger rounded py-2 px-4 mt-3 fs-5 fs-md-4">Shop now <i
+                                    class="bi bi-cart4"></i></a>
                         </div>
 
-                        <!-- Right Column: Image -->
                         <div class="col-md-6 text-center">
-                            <img class="product-image img-fluid" src="/images/landingpage/03.png" alt="VR Glasses">
+                            <img class="product-image img-fluid w-100 h-auto" style="max-width: 400px;"
+                                src="/images/landingpage/03.png" alt="VR Glasses">
                         </div>
                     </div>
                 </section>
             </div>
 
         </div>
+    </section>
 
-    </div>
+
+
+
+    <!-- ********************************************home****************************************************     -->
 
 
     <div class="container-fluid mt-4 px-5">
@@ -468,8 +472,7 @@
                     </div>
                     <div class="col-6 col-md-4 col-lg-2 mb-3">
                         <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
-                            <img src="/images/brandNames/motorola.svg" class="img-fluid w-100 h-auto"
-                                alt="Motorola">
+                            <img src="/images/brandNames/motorola.svg" class="img-fluid w-100 h-auto" alt="Motorola">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-2 mb-3">
@@ -508,7 +511,7 @@
             <div class="col-0 d-none d-lg-block"></div>
 
             <!-- Main Content -->
-            <div class="col-12">
+            <div class="col-12 padding-categories">
                 <div class="row  justify-content-center">
 
                     <!-- Smartphones & Laptops -->
@@ -516,8 +519,7 @@
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary">
                                 <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
-                                    <img src="/images/categories/smartphone/01.png" class="img-fluid"
-                                        alt="Smartphone">
+                                    <img src="/images/categories/smartphone/01.png" class="img-fluid" alt="Smartphone">
                                 </a>
                             </div>
                             <div class="text-box">
@@ -564,8 +566,7 @@
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary">
                                 <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
-                                    <img src="/images/categories/wearable/03.png" class="img-fluid"
-                                        alt="Wearables">
+                                    <img src="/images/categories/wearable/03.png" class="img-fluid" alt="Wearables">
                                 </a>
                             </div>
                             <div class="text-box">
@@ -659,8 +660,7 @@
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary">
                                 <a href="#" target="_blank">
-                                    <img src="/images/categories/smarthome/12.png" class="img-fluid"
-                                        alt="Smart Home">
+                                    <img src="/images/categories/smarthome/12.png" class="img-fluid" alt="Smart Home">
                                 </a>
                             </div>
 
@@ -710,10 +710,8 @@
                 style="background-color: #9bbffa;">
 
                 <div class="col-12 col-lg-6 d-flex justify-content-between">
-                    <img src="/images/categories/smartphone/iphone16.1.png" class="img-fluid w-50 h-auto"
-                        alt="iPhone">
-                    <img src="/images/categories/smartphone/iphone16.png" class="img-fluid w-50 h-auto"
-                        alt="iPhone">
+                    <img src="/images/categories/smartphone/iphone16.1.png" class="img-fluid w-50 h-auto" alt="iPhone">
+                    <img src="/images/categories/smartphone/iphone16.png" class="img-fluid w-50 h-auto" alt="iPhone">
                 </div>
 
                 <div
@@ -752,7 +750,7 @@
 
     <!-- *********************************************************************************************************************** -->
 
-    <section class="container-fluid mt-5 px-3 px-md-4 px-lg-5 px-xl-5 ">
+    <section class="container p-0 ">
         <div class="row">
 
             <div class="col-6 col-sm-6 col-md-6 col-lg-3 mt-5">
@@ -904,8 +902,7 @@
                             <button class="btn btn-light btn-sm"><i class="far fa-heart"></i></button>
                             <button class="btn btn-light btn-sm"><i class="fas fa-sync-alt"></i></button>
                         </div>
-                        <img src="/images/products/04.png" alt="Laptop Apple MacBook Pro 13 M2"
-                            class="product-img">
+                        <img src="/images/products/04.png" alt="Laptop Apple MacBook Pro 13 M2" class="product-img">
                         <div class="d-flex align-items-center mt-3">
                             <div class="stars text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
                             <span class="ms-2 text-muted">(51)</span>
@@ -992,8 +989,7 @@
                             <button class="btn btn-light btn-sm"><i class="fas fa-sync-alt"></i></button>
                         </div>
 
-                        <img src="/images/products/08.png" alt="Wireless Bluetooth Headphones Sony"
-                            class="product-img">
+                        <img src="/images/products/08.png" alt="Wireless Bluetooth Headphones Sony" class="product-img">
 
                         <div class="d-flex align-items-center mt-3">
                             <div class="stars text-warning">
@@ -1022,9 +1018,7 @@
     </section>
 
 
-    <div class="v">
-
-    </div>
+    <div id="footer-placeholder"></div>
 
 
 
@@ -1035,18 +1029,14 @@
 
 
 
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 
 </body>
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
 
 </html>

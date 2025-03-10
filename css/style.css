@@ -1,8 +1,8 @@
-/* Custom Navbar Styles */
 
 .navbar {
     background-color: #222 !important;
 }
+
 
 .navbar-brand span {
     font-size: 1.3rem;
@@ -53,22 +53,20 @@ form .form-control {
 
 body {
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for background and text color changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Light theme (default) */
 body {
-    background-color: #fff;  /* White background for light theme */
-    color: #000;  /* Black text color for light theme */
+    background-color: #fff;
+    color: #000;
 }
 
-/* Dark theme styles */
+
 body.dark-mode {
-    background-color: #121212;  /* Dark background for dark theme */
-    color: #fff;  /* White text color for dark theme */
+    background-color: #121212;
+    color: #fff;
 }
 
-/* Navbar and other elements' styles */
 .navbar {
     background-color: #f8f9fa;
     border-bottom: 1px solid #ddd;
@@ -81,64 +79,66 @@ body.dark-mode {
 }
 
 body {
-            background-color: #f8f9fa;
-        }
+    background-color: #f8f9fa;
+}
 
-        .sidebar {
-            width: 280px;
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.sidebar {
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            left: 100%;
-            top: 0;
-            min-width: 200px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 200px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        .dropdown:hover > .dropdown-menu {
-            display: block;
-            animation: fadeIn 0.3s ease-in-out;
-        }
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
 
-        .nav-link {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            font-size: 16px;
-            color: #333;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .nav-link:hover, .nav-link.active {
-            background: #e9ecef;
-        }
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
 
-        .nav-link i {
-            font-size: 18px;
-            margin-right: 10px;
-            color: #007bff;
-        }
-        
-        
+.nav-link:hover,
+.nav-link.active {
+    background: #e9ecef;
+}
 
+.nav-link i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #007bff;
+}
 
-
-        /* catergeries */
- /* Sidebar styling */
 .category-menu {
     width: 250px;
     background: #ffffff;
@@ -147,7 +147,6 @@ body {
     border-radius: 5px;
 }
 
-/* Category Items */
 .category-item {
     padding: 10px;
     cursor: pointer;
@@ -157,28 +156,28 @@ body {
     position: relative;
 }
 
-/* Hover effect for categories */
+
 .category-item:hover {
     background: #f6f7f89e;
 }
 
-/* Submenu container */
+
 .submenu {
     position: absolute;
     left: 100%;
     top: 0;
     width: 400px;
     background: white;
-    visibility: hidden; 
+    visibility: hidden;
     opacity: 0;
     transition: visibility 0.2s, opacity 0.2s ease-in-out;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     pointer-events: none;
 }
 
-/* When hovering on category-item OR submenu, keep it visible */
+
 .category-item:hover .submenu,
 .submenu:hover {
     visibility: visible;
@@ -186,7 +185,7 @@ body {
     pointer-events: auto;
 }
 
-/* Submenu Header */
+
 .submenu h6 {
     padding: 10px;
     margin: 0;
@@ -194,7 +193,7 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-/* Submenu List */
+
 .submenu-list {
     list-style: none;
     padding: 10px;
@@ -205,109 +204,90 @@ body {
     cursor: pointer;
 }
 
-/* Hover effect on submenu items */
+
 .submenu-list li:hover {
     background: #f1f1f1;
 }
 
 
-
-
 .breadcrumb {
     font-size: 18px;
     font-weight: 500;
-    margin-left: -50px; /* Move more to the left */
+    margin-left: -50px;
 }
+
 .breadcrumb a {
     text-decoration: none;
     color: black;
 }
-.breadcrumb-item + .breadcrumb-item::before {
+
+.breadcrumb-item+.breadcrumb-item::before {
     content: ">";
     padding: 0 5px;
 }
 
-/* Shop Categories Title moved more to the left */
+
 .shop-title {
     font-size: 32px;
     font-weight: bold;
-    margin-left: -30px; /* Adjusted to move left */
+    margin-left: -30px;
 }
 
-/* Brand Logos Styling */
+
 .brand-logos img {
     max-width: 400px;
     opacity: 0.7;
     transition: 0.3s;
 }
+
 .brand-logos img:hover {
     opacity: 1;
 }
 
 
 
-
-/* .fixed-box {
-    width: 200px; 
-    height: 200px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f9fa; 
-    border: 1px solid #ddd; 
-    border-radius: 40px; 
-    box-shadow: 2px 2px 10px rgba(236, 17, 17, 0.933); 
-    padding: 10px; 
-}
-
-.fixed-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-} */
-
-/* for the caterigers with nav links */
 .card-box {
     padding: 20px;
     height: 100%;
     min-height: 450px;
-    
+
 }
+
 .image-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 400px; 
+    height: 400px;
     padding: 15px;
     border-radius: 2px;
-  
+
 }
 
 .image-box img {
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 100%;
-    height: 100%; 
-    object-fit: contain; 
+    height: 100%;
+    object-fit: contain;
     transition: transform 0.4s ease-in-out;
 }
 
 .image-box:hover img {
     transform: scale(1.1);
-   
+
 }
 
-/* ********************************************************************************** */
+
 
 
 .text-box {
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .text-box h4 {
-    min-height: 50px; 
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -320,27 +300,28 @@ body {
 
 
 .small-space {
-    width: 2px; 
+    width: 2px;
 }
+
 .content-area {
     flex: 1;
 }
 
 
 
-/* Style for the list items */
+
 .text-box ul li a {
-    color: #333D4C !important; 
-    font-size: 18px; 
+    color: #333D4C !important;
+    font-size: 18px;
     padding-left: 1rem;
-   
+
     position: relative;
-    text-decoration: none; 
-    padding-bottom: 5px; 
-   
+    text-decoration: none;
+    padding-bottom: 5px;
+
 }
 
-/* Underline Animation */
+
 .text-box ul li a::after {
     content: "";
     position: absolute;
@@ -348,17 +329,17 @@ body {
     bottom: 0;
     width: 0%;
     height: 2px;
-    background-color: rgb(159, 159, 159); 
-    transition: width 0.2s ease-in-out ;
+    background-color: rgb(159, 159, 159);
+    transition: width 0.2s ease-in-out;
 }
 
-/* Expand underline on hover */
+
 .text-box ul li a:hover::after {
     width: 100%;
 }
 
 .video-circle {
-    width: 400px;  
+    width: 400px;
     height: 200px;
     border-radius: 90%;
     overflow: hidden;
@@ -366,4 +347,40 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 4px 10px rgb(0, 0, 0);
+}
+
+
+footer {
+    font-size: 14px;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer .btn {
+    border-radius: 25px;
+}
+.text-aera ul li a {
+    color: #d7d9dc !important;
+    font-size: 18px;
+    padding-left: 1rem;
+
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+
+}
+.text-aera ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(159, 159, 159);
+    transition: width 0.2s ease-in-out;
+}
+.text-aera ul li a:hover::after {
+    width: 100%;
 }
