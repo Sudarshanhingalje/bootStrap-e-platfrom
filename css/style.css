@@ -328,3 +328,9 @@ body.dark-mode {
     text-decoration: underline;
     color: #007bff;
 }
+.small-badge {
+    font-size: 10px; 
+    padding: 2px 6px; 
+   background-color: #007bff;
+    opacity: 0.8; 
+}
