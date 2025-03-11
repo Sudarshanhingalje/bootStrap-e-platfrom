@@ -29,11 +29,11 @@
 <body>
     <header class="navbar navbar-dark bg-dark px-3">
         <div class="container-fluid">
-            <!-- Row 1: Logo, Search Bar, Icons -->
+           
             <div class="row w-100 align-items-center py-2">
-                <!-- Left: Logo & Mobile Menu Button -->
+                
                 <div class="col-lg-2 col-md-3 col-6 d-flex align-items-center">
-                    <!-- Mobile Menu Button -->
+                    
                     <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                         <span class="navbar-toggler-icon"></span>
@@ -763,24 +763,25 @@
 
                 <!-- Language Selector -->
                 <div class="col-md-auto ms-auto">
-                    <select class="form-select form-select-sm">
-                        <option value="en">🇬🇧 English</option>
-                        <option value="fr">🇫🇷 French</option>
-                        <option value="es">🇪🇸 Spanish</option>
+                    <select id="language-select" class="form-select form-select-sm">
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                        <option value="mr">Marathi</option>
                     </select>
                 </div>
+            
             </div>
         </div>
     </header>
 
-    <!-- Mobile Offcanvas Menu -->
+
     <div class="offcanvas offcanvas-start text-bg-dark" id="offcanvasMenu">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Menu</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
-            <!-- Mobile Search Bar -->
+            
             <div class="mb-3">
                 <div class="input-group">
                     <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
@@ -788,7 +789,7 @@
                 </div>
             </div>
 
-            <!-- Mobile Categories Button -->
+            
             <div class="mb-3">
                 <button class="btn btn-light w-100 dropdown-toggle" type="button" id="mobileCategoryDropdown"
                     data-bs-toggle="dropdown">
@@ -802,7 +803,7 @@
                 </ul>
             </div>
 
-            <!-- Mobile Navigation Links -->
+            
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#">Shop</a></li>
@@ -814,7 +815,7 @@
         </div>
     </div>
 
-    <!-- Shopping Cart Offcanvas -->
+    
     <div class="offcanvas offcanvas-end text-bg-dark" id="shoppingCart">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Shopping Cart</h5>
@@ -838,7 +839,7 @@
                 <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
             </div>
 
-            <!-- Slide Template -->
+           
             <div class="carousel-item active" data-bs-interval="3000">
                 <section class="container">
                     <div class="row d-flex align-items-center text-md-start text-center ">
@@ -859,7 +860,7 @@
                 </section>
             </div>
 
-            <!-- Slide 2 -->
+           
             <div class="carousel-item" data-bs-interval="3000">
                 <section class="container">
                     <div class="row d-flex align-items-center text-md-start text-center">
@@ -880,7 +881,7 @@
                 </section>
             </div>
 
-            <!-- Slide 3 -->
+          
             <div class="carousel-item" data-bs-interval="3000">
                 <section class="container">
                     <div class="row d-flex align-items-center text-md-start text-center">
@@ -912,7 +913,7 @@
 
     <div class="container-fluid mt-4 px-5">
         <div class="row">
-            <!-- Breadcrumb - Moves Right on Larger Screens -->
+           
             <div class="col-12 text-md-end text-start fs-3">
                 <nav class="breadcrumb">
                     <span class="text-dark ps-4">Home > </span>
@@ -920,12 +921,12 @@
                 </nav>
             </div>
 
-            <!-- Shop Categories Title - Center on Small Screens, Left on Large -->
+            
             <div class="col-12 text-md-start text-center">
                 <h2 class="shop-title fw-bold">Shop Categories</h2>
             </div>
 
-            <!-- Brand Logos - 2 per row on mobile, 6 per row on large screens -->
+            
             <div class="col-12 mt-3">
                 <div class="row brand-logos justify-content-center text-center">
                     <div class="col-6 col-md-4 col-lg-2 mb-3">
@@ -1464,7 +1465,7 @@
 
 
 
-
+    <script src="language.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
