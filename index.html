@@ -11,7 +11,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-   
+
 
 
     <!-- font link -->
@@ -27,342 +27,805 @@
 </head>
 
 <body>
-
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark d-block  py-0 px-5"
-        data-sticky-navbar="{&quot;offset&quot;: 200}">
-
-        <div class="container py-1 py-lg-3" data-bs-theme="dark">
-            <div class="navbar-stuck-hide pt-1"></div>
-            <div class="row flex-nowrap d-flex align-items-center">
-
-
-                <div class="col col-lg-3 d-flex align-items-center justify-content-start">
-
+    <header class="navbar navbar-dark bg-dark px-3">
+        <div class="container-fluid">
+            <!-- Row 1: Logo, Search Bar, Icons -->
+            <div class="row w-100 align-items-center py-2">
+                <!-- Left: Logo & Mobile Menu Button -->
+                <div class="col-lg-2 col-md-3 col-6 d-flex align-items-center">
                     <!-- Mobile Menu Button -->
-                    <button type="button" class="navbar-toggler me-auto" data-bs-toggle="offcanvas"
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <!-- Brand Logo -->
-                    <a href="index.html" class="navbar-brand me-0  ms-2 d-flex align-items-center flex-shrink-0 ">
-                        <span class="d-none d-sm-flex flex-shrink-0 text-primary me-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                                class="bi bi-shop-window" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
-                            </svg>
-                        </span>
-                        <span class="text-white fs-1 fw-bold lh-1 pe-none">Trendora</span>
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                        <img src="/images/brandNames/logo.png" alt="Trendora Logo" class="img-fluid me-2"
+                            style="max-height: 80px; width: auto;">
+                        <span class="text-white fw-bold fs-1">Trendora</span>
                     </a>
                 </div>
 
-                <!-- Right Section: Search Bar & Icons -->
-                <div class="col col-lg-9 d-flex align-items-center justify-content-end ">
-
-                    <!-- Search Bar -->
-                    <div class="d-none d-lg-flex align-items-center w-150 me-3">
-                        <input class="form-control me-2 rounded-pill fs-4 fw-bold lh-1 text-truncate" type="text"
-                            style="width: 300px;" placeholder="search the prouduct">
-                        <button class="btn btn-primary rounded-pill fs-2 fw-bold lh-1" type="button">Search</button>
+                <!-- Center: Search Bar (Desktop Only) -->
+                <div class="col-lg-6 col-md-5 d-none d-md-flex">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search the products">
                     </div>
+                </div>
 
-                    <!-- Icons: User, Wishlist, Cart -->
-
-                    <a href="#"
-                        class="d-none d-xl-flex align-items-center text-decoration-none text-white animate-shake p-4 rounded mb-2">
-
-                        <!-- sale icon -->
-                        <div
-                            class="btn btn-icon btn-lg fs-lg  text-primary bg-body-secondary bg-opacity-80 pe-none rounded-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red"
-                                class="bi bi-percent" viewBox="0 0 16 16">
-                                <path
-                                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                            </svg>
-                        </div>
-                        <div class="ps-2 text-nowrap">
-
-                            <div class="fs-xs text-body  fs-6">Only this month</div>
-                            <div style="display: inline;" class="fw-semibold text-white fs-5">Super Sale 20%</div>
-
-                        </div>
-
+                <!-- Right: Icons -->
+                <div class="col-lg-4 col-md-4 col-6 d-flex justify-content-end">
+                    <a href="account-signin.html" class="btn btn-outline-light me-2">
+                        <i class="bi bi-person"></i>
                     </a>
+                    <a href="account-wishlist.html" class="btn btn-outline-light me-2">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <button class="btn btn-outline-light position-relative" data-bs-toggle="offcanvas"
+                        data-bs-target="#shoppingCart">
+                        <i class="bi bi-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                            3
+                        </span>
+                    </button>
+                </div>
+            </div>
 
-                    <!-- four buuton created -->
-                    <div class="container d-flex ">
-                        <div class="d-flex align-items-center justify-content-between px-3">
 
-                            <!-- Navbar stuck nav toggler -->
-                            <button type="button" class="navbar-toggler d-none navbar-stuck-show me-3 "
-                                data-bs-toggle="collapse" data-bs-target="#stuckNav" aria-controls="stuckNav"
-                                aria-expanded="false" aria-label="Toggle navigation in navbar stuck state">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
 
-                            <!-- Theme switcher (light/dark/auto) -->
-                            <div class="dropdown">
-                                <button type="button"
-                                    class="theme-switcher btn btn-icon btn-lg btn-outline-secondary fs-lg border-0 rounded-circle animate-scale"
-                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (light)">
-                                    <span class="theme-icon-active d-flex animate-target">
-                                        <i class="bi bi-sun fs-1"></i>
-                                    </span>
-                                </button>
-                                <ul class="dropdown-menu" style="--cz-dropdown-min-width: 9rem">
-                                    <li>
-                                        <button type="button" class="dropdown-item active" data-bs-theme-value="light"
-                                            aria-pressed="true">
-                                            <span class="theme-icon d-flex fs-base me-2">
-                                                <i class="bi bi-sun fs-1"></i>
-                                            </span>
-                                            <span class="theme-label">Light</span>
-                                            <i class="item-active-indicator bi bi-check ms-auto"></i>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="dropdown-item" data-bs-theme-value="dark"
-                                            aria-pressed="false">
-                                            <span class="theme-icon d-flex fs-base me-2">
-                                                <i class="bi bi-moon"></i>
-                                            </span>
-                                            <span class="theme-label">Dark</span>
-                                            <i class="item-active-indicator bi bi-check ms-auto"></i>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="dropdown-item" data-bs-theme-value="auto"
-                                            aria-pressed="false">
-                                            <span class="theme-icon d-flex fs-base me-2">
-                                                <i class="bi bi-automobile"></i>
-                                            </span>
-                                            <span class="theme-label">Auto</span>
-                                            <i class="item-active-indicator bi bi-check ms-auto"></i>
-                                        </button>
-                                    </li>
-                                </ul>
+
+            <div class="row w-100 align-items-center bg-secondary py-2 px-3 d-none d-lg-flex">
+
+                <div class="col-md-auto">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown"
+                        data-bs-toggle="dropdown">
+                        <i class="bi bi-grid-fill me-2"></i> Categories
+                    </button>
+                    <ul class="dropdown-menu category-menu" aria-labelledby="categoryDropdown">
+                        <li class="dropdown-item category-item position-relative">
+                            <span><i class="bi bi-laptop me-2"></i> Computers & Accessories</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Computers -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Computers</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Laptops & Tablets</a></li>
+                                            <li><a href="#">Desktop Computers</a></li>
+                                            <li><a href="#">External Components</a></li>
+                                            <li><a href="#">Internal Components</a></li>
+                                            <li><a href="#">Networking Products (NAS)</a></li>
+                                            <li><a href="#">Single Board Computers</a></li>
+                                            <li><a href="#">Desktop Barebones</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Monitors</a></li>
+                                            <li><a href="#">Bags, Cases & Sleeves</a></li>
+                                            <li><a href="#">Batteries</a></li>
+                                            <li><a href="#">Chargers & Adapters</a></li>
+                                            <li><a href="#">Cooling Pads</a></li>
+                                            <li><a href="#">Mounts</a></li>
+                                            <li><a href="#">Replacement Screens</a></li>
+                                            <li><a href="#">Security Locks</a></li>
+                                            <li><a href="#">Stands</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2 ">
+                                        <div class="promo-box bg-body-secondary p-4  text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column;  justify-content: space-between;">
+
+                                            <div>
+                                                <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Save
+                                                    up to $400</span>
+                                                <p class="text-muted mb-2">Starts from <del>$1,599.00</del>
+                                                    <strong>$1,399.00</strong>
+                                                </p>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">Surface <br>Laptop Studio</h4>
+                                            </div>
+
+                                            <img src="/images/categoery-submenu/01.png" alt="Surface Laptop Studio"
+                                                class="img-fluid rounded " style="max-width: 100%; height: auto;">
+
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-phone me-2"></i> Smartphones & Tablets</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Computers -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Computers</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Laptops & Tablets</a></li>
+                                            <li><a href="#">Desktop Computers</a></li>
+                                            <li><a href="#">External Components</a></li>
+                                            <li><a href="#">Internal Components</a></li>
+                                            <li><a href="#">Networking Products (NAS)</a></li>
+                                            <li><a href="#">Single Board Computers</a></li>
+                                            <li><a href="#">Desktop Barebones</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Monitors</a></li>
+                                            <li><a href="#">Bags, Cases & Sleeves</a></li>
+                                            <li><a href="#">Batteries</a></li>
+                                            <li><a href="#">Chargers & Adapters</a></li>
+                                            <li><a href="#">Cooling Pads</a></li>
+                                            <li><a href="#">Mounts</a></li>
+                                            <li><a href="#">Replacement Screens</a></li>
+                                            <li><a href="#">Security Locks</a></li>
+                                            <li><a href="#">Stands</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2 ">
+                                        <div class="promo-box bg-body-secondary p-4  text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column;  justify-content: space-between;">
+
+                                            <div>
+                                                <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Save
+                                                    up to $400</span>
+                                                <p class="text-muted mb-2">Starts from <del>$1,599.00</del>
+                                                    <strong>$1,399.00</strong>
+                                                </p>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">Surface <br>Laptop Studio</h4>
+                                            </div>
+
+                                            <img src="/images/categoery-submenu/01.png" alt="Surface Laptop Studio"
+                                                class="img-fluid rounded " style="max-width: 100%; height: auto;">
+
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-tv me-2"></i> TV, Video & Audio</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: TV, Video & Audio -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">TV, Video & Audio</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">TV Sets</a></li>
+                                            <li><a href="#">Home Theater Systems</a></li>
+                                            <li><a href="#">DVD Players & Recorders</a></li>
+                                            <li><a href="#">Blue-ray Players & Recorders</a></li>
+                                            <li><a href="#">HD DVD Players & Recorders</a></li>
+                                            <li><a href="#">DTV Converters</a></li>
+                                            <li><a href="#">AV Receivers</a></li>
+                                            <li><a href="#">AV Amplifiers</a></li>
+                                            <li><a href="#">Projectors</a></li>
+                                            <li><a href="#">Projection Screens</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Home Cinema Systems -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Home Cinema Systems</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Streaming Media Players</a></li>
+                                            <li><a href="#">VCRs</a></li>
+                                            <li><a href="#">Video Glasses</a></li>
+                                            <li><a href="#">Lens Attachments</a></li>
+                                            <li><a href="#">Subwoofers</a></li>
+                                            <li><a href="#">Sound Boosters</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Best
+                                                    deal! Save up to $500</span>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">LG OLED <br> 4K Smart TV</h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/03.png" alt="LG OLED 4K Smart TV"
+                                                class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-music-note-beamed me-2"></i> Speakers & Home Music</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Speakers -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Speakers</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Smart Speakers</a></li>
+                                            <li><a href="#">Bluetooth Speakers</a></li>
+                                            <li><a href="#">Bookshelf Speakers</a></li>
+                                            <li><a href="#">Ceiling & In-Wall Speakers</a></li>
+                                            <li><a href="#">Center-Channel Speakers</a></li>
+                                            <li><a href="#">Floorstanding Speakers</a></li>
+                                            <li><a href="#">Outdoor Speakers</a></li>
+                                            <li><a href="#">Satellite Speakers</a></li>
+                                            <li><a href="#">Sound Bars</a></li>
+                                            <li><a href="#">Surround Sound Systems</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Home Audio -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Home Audio</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Home Theater</a></li>
+                                            <li><a href="#">Wireless & Streaming Audio</a></li>
+                                            <li><a href="#">Stereo System Components</a></li>
+                                            <li><a href="#">Compact Radios & Stereos</a></li>
+                                            <li><a href="#">Home Audio Accessories</a></li>
+                                            <li><a href="#">Subwoofers</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Deal
+                                                    of the week</span>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">Nest Audio</h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/04.png" alt="Nest Audio"
+                                                class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-camera me-2"></i> Cameras, Photo & Video</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Cameras & Lenses -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Cameras & Lenses</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Point & Shoot Cameras</a></li>
+                                            <li><a href="#">DSLR Cameras</a></li>
+                                            <li><a href="#">Mirrorless Cameras</a></li>
+                                            <li><a href="#">Body Mounted Cameras</a></li>
+                                            <li><a href="#">Camcorders</a></li>
+                                            <li><a href="#">Camcorder Lenses</a></li>
+                                            <li><a href="#">Camera Lenses</a></li>
+                                            <li><a href="#">Macro & Ringlight Flashes</a></li>
+                                            <li><a href="#">Shoe Mount Flashes</a></li>
+                                            <li><a href="#">Tripods & Monopods</a></li>
+                                            <li><a href="#">Video Studio</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Bags & Cases</a></li>
+                                            <li><a href="#">Binoculars & Scopes</a></li>
+                                            <li><a href="#">Batteries & Chargers</a></li>
+                                            <li><a href="#">Cables & Cords</a></li>
+                                            <li><a href="#">Camcorder Accessories</a></li>
+                                            <li><a href="#">Cleaning Equipment</a></li>
+                                            <li><a href="#">Protector Foils</a></li>
+                                            <li><a href="#">Filters & Accessories</a></li>
+                                            <li><a href="#">Remote Controls</a></li>
+                                            <li><a href="#">Rain Covers</a></li>
+                                            <li><a href="#">Viewfinders</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+
+                                            <div>
+                                                <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">
+                                                    Save up to $300
+                                                </span>
+                                                <p class="text-muted mb-2">
+                                                    Starts from <del>$1,100.00</del>
+                                                    <strong>$899.00</strong>
+                                                </p>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">Canon <br>Digital Cameras</h4>
+                                            </div>
+
+                                            <img src="/images/categoery-submenu/05.png" alt="Canon Digital Camera"
+                                                class="img-fluid rounded" style="max-width: 100%; height: auto;">
+
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
 
+                        </li>
 
-
-                            <!-- Account button visible on screens > 768px wide (md breakpoint) -->
-                            <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex"
-                                href="account-signin.html">
-                                <i class="bi bi-person animate-target fs-1"></i>
-                                <span class="visually-hidden ">Account</span>
-                            </a>
-
-                            <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
-                            <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex"
-                                href="account-wishlist.html">
-                                <i class="bi bi-heart animate-target fs-1"></i>
-                                <span class="visually-hidden">Wishlist</span>
-                            </a>
-
-                            <!-- Cart button -->
-                            <button type="button"
-                                class="btn btn-icon btn-lg btn-secondary position-relative rounded-circle ms-2"
-                                data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart"
-                                aria-label="Shopping cart">
-                                <span
-                                    class="position-absolute top-0 start-100 mt-n1 ms-n3 badge text-bg-success border border-3 border-dark rounded-pill fs-6"
-                                    style="--cz-badge-padding-y: .25em; --cz-badge-padding-x: .42em">0</span>
-                                <span
-                                    class="position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 rounded-circle animate-slide-end fs-lg">
-                                    <i class="bi bi-cart animate-target ms-n1 fs-1"></i>
-                                </span>
-                            </button>
-
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-printer me-2"></i> Printers & Ink</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex" 
+                            style="width: 800px; display: none;">
+                            <div class="row w-100">
+                                <!-- Column 1: Printers -->
+                                <div class="col">
+                                    <h6 class="fw-bold text-black">Printers</h6>
+                                    <ul class="submenu-list list-unstyled">
+                                        <li><a href="#">Inkjet Printers</a></li>
+                                        <li><a href="#">Laser Printers</a></li>
+                                        <li><a href="#">All-in-One Printers</a></li>
+                                        <li><a href="#">Photo Printers</a></li>
+                                        <li><a href="#">Portable Printers</a></li>
+                                    </ul>
+                                </div>
+                        
+                                <!-- Column 2: Printer Ink & Accessories -->
+                                <div class="col">
+                                    <h6 class="fw-bold text-black">Printer Ink & Accessories</h6>
+                                    <ul class="submenu-list list-unstyled">
+                                        <li><a href="#">Ink Cartridges</a></li>
+                                        <li><a href="#">Toner Cartridges</a></li>
+                                        <li><a href="#">Refill Kits</a></li>
+                                        <li><a href="#">Printer Paper</a></li>
+                                        <li><a href="#">Printer Cables</a></li>
+                                    </ul>
+                                </div>
+                        
+                                <!-- Column 3: Promo Image -->
+                                <div class="col d-flex justify-content-end rounded-2">
+                                    <div class="promo-box bg-body-secondary p-4 text-center"
+                                        style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                        <div>
+                                            <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Hot Deal! Save 30%</span>
+                                            <h4 class="fw-bold fs-3 text-black mb-3">HP LaserJet Pro <br> Wireless Printer</h4>
+                                        </div>
+                                        <img src="/images/categoery-submenu/06.png" alt="HP LaserJet Pro Wireless Printer"
+                                            class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                                        <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-lightning-charge me-2"></i> Charging Stations</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Wireless Charging Pads -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Wireless Charging Pads</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Qi Wireless Chargers</a></li>
+                                            <li><a href="#">MagSafe Chargers</a></li>
+                                            <li><a href="#">Fast Wireless Chargers</a></li>
+                                            <li><a href="#">Multi-Device Charging Pads</a></li>
+                                            <li><a href="#">Car Wireless Chargers</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Charging Stations & Docks -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Charging Stations & Docks</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">USB Charging Hubs</a></li>
+                                            <li><a href="#">Desktop Charging Stations</a></li>
+                                            <li><a href="#">Portable Power Stations</a></li>
+                                            <li><a href="#">Solar Charging Stations</a></li>
+                                            <li><a href="#">Docking Stations</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span
+                                                    class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Limited
+                                                    Time! Save 30%</span>
+                                                <h4 class="fw-bold fs-4 text-black mb-3">MagSafe <br> Wireless Charger
+                                                </h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/07.png" alt="MagSafe Wireless Charger"
+                                                class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-headphones me-2"></i> Headphones</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Over-Ear & On-Ear Headphones -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Over-Ear & On-Ear Headphones</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Noise-Canceling Headphones</a></li>
+                                            <li><a href="#">Wireless Bluetooth Headphones</a></li>
+                                            <li><a href="#">Gaming Headsets</a></li>
+                                            <li><a href="#">Studio Headphones</a></li>
+                                            <li><a href="#">Sports & Workout Headphones</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Earbuds & Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Earbuds & Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">True Wireless Earbuds</a></li>
+                                            <li><a href="#">Wired Earbuds</a></li>
+                                            <li><a href="#">Ear Hooks & Covers</a></li>
+                                            <li><a href="#">Charging Cases</a></li>
+                                            <li><a href="#">Replacement Ear Tips</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span
+                                                    class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Exclusive
+                                                    Deal! Save 25%</span>
+                                                <h4 class="fw-bold fs-4 text-black mb-3">Sony <br> WH-1000XM5 <br> Noise
+                                                    Cancelling <br><b>Headphones</b></h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/08.png"
+                                                alt="Sony WH-1000XM5 Noise Cancelling Headphones"
+                                                class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-smartwatch me-2"></i> Wearable Electronics</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Smartwatches -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Smartwatches</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Apple Watch</a></li>
+                                            <li><a href="#">Samsung Galaxy Watch</a></li>
+                                            <li><a href="#">Garmin Smartwatches</a></li>
+                                            <li><a href="#">Fitbit Smartwatches</a></li>
+                                            <li><a href="#">Fossil Smartwatches</a></li>
+                                            <li><a href="#">Huawei Smartwatches</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Fitness & Health Trackers -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Fitness & Health Trackers</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Fitness Bands</a></li>
+                                            <li><a href="#">Heart Rate Monitors</a></li>
+                                            <li><a href="#">Sleep Trackers</a></li>
+                                            <li><a href="#">GPS Sports Watches</a></li>
+                                            <li><a href="#">Smart Rings</a></li>
+                                            <li><a href="#">Wearable ECG Monitors</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span
+                                                    class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Exclusive
+                                                    Offer! Save 20%</span>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">Apple Watch <br> Series 9</h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/09.png" alt="Apple Watch Series 9"
+                                                class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-battery-full me-2"></i> Powerbanks</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Portable Power Banks -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Portable Power Banks</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">High-Capacity Power Banks</a></li>
+                                            <li><a href="#">Fast Charging Power Banks</a></li>
+                                            <li><a href="#">Wireless Power Banks</a></li>
+                                            <li><a href="#">Solar Power Banks</a></li>
+                                            <li><a href="#">MagSafe Power Banks</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Power Bank Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Power Bank Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Charging Cables</a></li>
+                                            <li><a href="#">Protective Cases</a></li>
+                                            <li><a href="#">Carrying Pouches</a></li>
+                                            <li><a href="#">Multi-Port Adapters</a></li>
+                                            <li><a href="#">Replacement Batteries</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span
+                                                    class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Special
+                                                    Offer! Save 30%</span>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">Anker 20000mAh <br> Fast
+                                                    Charging <br>Power Bank</h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/10.png"
+                                                alt="Anker 20000mAh Fast Charging Power Bank" class="img-fluid rounded"
+                                                style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-hdd me-2"></i> HDD/SSD Data Storage</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: HDD & External Hard Drives -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">HDD & External Hard Drives</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Portable External HDDs</a></li>
+                                            <li><a href="#">Desktop External HDDs</a></li>
+                                            <li><a href="#">Rugged & Shockproof HDDs</a></li>
+                                            <li><a href="#">High-Capacity Storage</a></li>
+                                            <li><a href="#">Gaming Hard Drives</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: SSD & Storage Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">SSD & Storage Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Portable SSDs</a></li>
+                                            <li><a href="#">NVMe & SATA SSDs</a></li>
+                                            <li><a href="#">External SSD Enclosures</a></li>
+                                            <li><a href="#">Storage Expansion Cards</a></li>
+                                            <li><a href="#">USB Flash Drives</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Hot
+                                                    Deal! Save 35%</span>
+                                                <h4 class="fw-bold fs-4 text-black mb-3">Samsung T7 <br> Portable SSD
+                                                    1TB</h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/11.png"
+                                                alt="Samsung T7 Portable SSD 1TB" class="img-fluid rounded"
+                                                style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown-item category-item">
+                            <span><i class="bi bi-controller me-2"></i> Video Games</span>
+                            <i class="bi bi-chevron-right"></i>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Video Game Consoles -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Video Game Consoles</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">PlayStation Consoles</a></li>
+                                            <li><a href="#">Xbox Consoles</a></li>
+                                            <li><a href="#">Nintendo Switch</a></li>
+                                            <li><a href="#">Handheld Gaming Devices</a></li>
+                                            <li><a href="#">Retro Gaming Consoles</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Gaming Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Gaming Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Gaming Controllers</a></li>
+                                            <li><a href="#">VR Headsets</a></li>
+                                            <li><a href="#">Gaming Headsets</a></li>
+                                            <li><a href="#">Charging Docks</a></li>
+                                            <li><a href="#">Gaming Keyboards & Mice</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span
+                                                    class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Limited
+                                                    Time! Save 20%</span>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">PlayStation 5 <br> Console
+                                                    Bundle</h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/12.png"
+                                                alt="PlayStation 5 Console Bundle" class="img-fluid rounded"
+                                                style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
+
+
+<!-- ************************************************************************************************************************************************** -->
+                <!-- Navigation Links -->
+                <div class="col-md-auto justify-content-center">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Account</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Docs</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Components</a></li>
+                    </ul>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="col-md-auto ms-auto">
+                    <select class="form-select form-select-sm">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="fr">🇫🇷 French</option>
+                        <option value="es">🇪🇸 Spanish</option>
+                    </select>
                 </div>
             </div>
-
-
         </div>
-        <div class="container mt-4">
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle w-100" type="button" id="categoryDropdown"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-th"></i> Categories
-                </button>
-                <div class="dropdown-menu category-menu" aria-labelledby="categoryDropdown">
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-laptop"></i> Computers & Accessories</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Computers & Accessories</h6>
-                            <ul class="submenu-list">
-                                <li>Laptops</li>
-                                <li>Desktops</li>
-                                <li>PC Components</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-tablet-alt"></i> Smartphones & Tablets</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Smartphones & Tablets</h6>
-                            <ul class="submenu-list">
-                                <li>Samsung</li>
-                                <li>Apple</li>
-                                <li>OnePlus</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-tv"></i> TV, Video & Audio</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>TV, Video & Audio</h6>
-                            <ul class="submenu-list">
-                                <li>Smart TVs</li>
-                                <li>Sound Systems</li>
-                                <li>Projectors</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-music"></i> Speakers & Home Music</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Speakers & Home Music</h6>
-                            <ul class="submenu-list">
-                                <li>Bluetooth Speakers</li>
-                                <li>Home Theater</li>
-                                <li>Soundbars</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-camera"></i> Cameras, Photo & Video</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Cameras, Photo & Video</h6>
-                            <ul class="submenu-list">
-                                <li>DSLR Cameras</li>
-                                <li>Mirrorless Cameras</li>
-                                <li>Camera Accessories</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-print"></i> Printers & Ink</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Printers & Ink</h6>
-                            <ul class="submenu-list">
-                                <li>Inkjet Printers</li>
-                                <li>Laser Printers</li>
-                                <li>Printer Accessories</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-charging-station"></i> Charging Stations</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Charging Stations</h6>
-                            <ul class="submenu-list">
-                                <li>Wireless Chargers</li>
-                                <li>Multi-device Chargers</li>
-                                <li>Power Hubs</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-headphones"></i> Headphones</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Headphones</h6>
-                            <ul class="submenu-list">
-                                <li>Wireless Headphones</li>
-                                <li>Noise Cancelling</li>
-                                <li>Gaming Headsets</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-clock"></i> Wearable Electronics</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Wearable Electronics</h6>
-                            <ul class="submenu-list">
-                                <li>Smartwatches</li>
-                                <li>Fitness Trackers</li>
-                                <li>VR Headsets</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-battery-full"></i> Powerbanks</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Powerbanks</h6>
-                            <ul class="submenu-list">
-                                <li>Fast Charging Powerbanks</li>
-                                <li>Wireless Powerbanks</li>
-                                <li>Solar Powerbanks</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-hdd"></i> HDD/SSD Data Storage</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>HDD/SSD Data Storage</h6>
-                            <ul class="submenu-list">
-                                <li>External Hard Drives</li>
-                                <li>Internal SSDs</li>
-                                <li>USB Flash Drives</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="category-item">
-                        <span><i class="fas fa-gamepad"></i> Video Games</span>
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="submenu">
-                            <h6>Video Games</h6>
-                            <ul class="submenu-list">
-                                <li>PlayStation</li>
-                                <li>Xbox</li>
-                                <li>PC Games</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
     </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start text-bg-dark" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Mobile Search Bar -->
+            <div class="mb-3">
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search the products">
+                </div>
+            </div>
+
+            <!-- Mobile Categories Button -->
+            <div class="mb-3">
+                <button class="btn btn-light w-100 dropdown-toggle" type="button" id="mobileCategoryDropdown"
+                    data-bs-toggle="dropdown">
+                    <i class="bi bi-grid-fill me-2"></i> Categories
+                </button>
+                <ul class="dropdown-menu w-100">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-laptop me-2"></i> Computers</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-phone me-2"></i> Smartphones</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-tv me-2"></i> TV & Audio</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-headphones me-2"></i> Headphones</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Navigation Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Shop</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Account</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Pages</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Docs</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Components</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end text-bg-dark" id="shoppingCart">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Shopping Cart</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Your cart has 3 items.</p>
+        </div>
+    </div>
+
+
 
 
     <!-- *********************************************************************************************************************************************** -->
@@ -510,7 +973,8 @@
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
-                                    <img src="/images/categories/smartphone/01.png" class="img-fluid w-100 h-auto" style="max-height: 150px; object-fit: contain;" alt="Smartphone">
+                                    <img src="/images/categories/smartphone/01.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt="Smartphone">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -527,12 +991,13 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-12 col-sm-6 col-lg-3 mb-4">
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
-                                    <img src="/images/categories/accessories/02.png" class="img-fluid w-100 h-auto" style="max-height: 150px; object-fit: contain;" alt="Accessories">
+                                    <img src="/images/categories/accessories/02.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt="Accessories">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -548,12 +1013,13 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-12 col-sm-6 col-lg-3 mb-4">
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="#">
-                                    <img src="/images/categories/laptops/04.png" class="img-fluid w-100 h-auto" style="max-height: 150px; object-fit: contain;" alt="Laptops">
+                                    <img src="/images/categories/laptops/04.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt="Laptops">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -573,7 +1039,8 @@
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom" target="_blank">
-                                    <img src="/images/categories/wearable/03.png" class="img-fluid w-100 h-auto"style="max-height: 150px; object-fit: contain; alt="Wearables">
+                                    <img src="/images/categories/wearable/03.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt=" Wearables">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -586,13 +1053,14 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Tablets -->
                     <div class="col-12 col-sm-6 col-lg-3 mb-4">
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="#" target="_blank">
-                                    <img src="/images/categories/tablets/05.png" class="img-fluid w-100 h-auto"style="max-height: 150px; object-fit: contain; alt="Tablets">
+                                    <img src="/images/categories/tablets/05.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt="Tablets">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -605,13 +1073,14 @@
                             </div>
                         </div>
                     </div>
-                
-    
+
+
                     <div class="col-12 col-sm-6 col-lg-3 mb-4">
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="#">
-                                    <img src="/images/categories/gameing/13.png" class="img-fluid w-100 h-auto" style="max-height: 150px; object-fit: contain;" alt="Gaming">
+                                    <img src="/images/categories/gameing/13.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt="Gaming">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -624,12 +1093,13 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-12 col-sm-6 col-lg-3 mb-4">
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="#">
-                                    <img src="/images/categories/smarthome/12.png" class="img-fluid w-100 h-auto" style="max-height: 150px; object-fit: contain;" alt="Smart Home">
+                                    <img src="/images/categories/smarthome/12.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt="Smart Home">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -641,12 +1111,13 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-12 col-sm-6 col-lg-3 mb-4">
                         <div class="rounded shadow-sm p-0 bg-light card-box">
                             <div class="image-box bg-body-secondary text-center p-3">
                                 <a href="#">
-                                    <img src="/images/categories/cameras/11.png" class="img-fluid w-100 h-auto" style="max-height: 150px; object-fit: contain;" alt="Cameras">
+                                    <img src="/images/categories/cameras/11.png" class="img-fluid w-100 h-auto"
+                                        style="max-height: 150px; object-fit: contain;" alt="Cameras">
                                 </a>
                             </div>
                             <div class="text-box p-3">
@@ -658,12 +1129,12 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
     </div>
-     
+
 
     <!-- ********************************banner******************************************************************** -->
 
@@ -702,7 +1173,7 @@
                 <div class="mt-auto d-flex justify-content-center">
                     <div class="video-circle">
                         <video class="w-100 h-auto" autoplay muted loop>
-                            <source src="/images/medium.mp4" type="video/mp4">
+                            <source src="/video/medium.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
