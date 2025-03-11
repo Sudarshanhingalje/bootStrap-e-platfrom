@@ -29,11 +29,11 @@
 <body>
     <header class="navbar navbar-dark bg-dark px-3">
         <div class="container-fluid">
-           
+
             <div class="row w-100 align-items-center py-2">
-                
+
                 <div class="col-lg-2 col-md-3 col-6 d-flex align-items-center">
-                    
+
                     <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                         <span class="navbar-toggler-icon"></span>
@@ -74,21 +74,25 @@
 
 
 
-            <div class="row w-100 align-items-center bg-secondary py-2 px-3 d-none d-lg-flex">
+            <div class="row w-100 align-items-center  py-2 px-3 d-none d-lg-flex">
 
                 <div class="col-md-auto">
-                    <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown"
-                        data-bs-toggle="dropdown">
+                    <button class="btn btn-light dropdown-toggle text-white px-4 py-2" type="button" id="categoryDropdown"
+                        data-bs-toggle="dropdown"style="width: 350px; background-color:#007bff;">
                         <i class="bi bi-grid-fill me-2"></i> Categories
                     </button>
-                    <ul class="dropdown-menu category-menu" aria-labelledby="categoryDropdown">
-                        <li class="dropdown-item category-item position-relative">
+
+
+
+
+                    <ul class="dropdown-menu category-menu P-5" style="margin-left: 50px; " aria-labelledby="categoryDropdown">
+                        <li class="dropdown-item category-item  position-relative" >
                             <span><i class="bi bi-laptop me-2"></i> Computers & Accessories</span>
                             <i class="bi bi-chevron-right"></i>
-                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
-                                style="width: 800px; display: none;">
+                            <div class="submenu position-absolute bg-white p-4 shadow  d-flex"
+                                style="width: 800px;border-radius: 15px; ">
                                 <div class="row w-100">
-                                    <!-- Column 1: Computers -->
+
                                     <div class="col">
                                         <h6 class="fw-bold text-black">Computers</h6>
                                         <ul class="submenu-list list-unstyled">
@@ -387,48 +391,51 @@
                         <li class="dropdown-item category-item">
                             <span><i class="bi bi-printer me-2"></i> Printers & Ink</span>
                             <i class="bi bi-chevron-right"></i>
-                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex" 
-                            style="width: 800px; display: none;">
-                            <div class="row w-100">
-                                <!-- Column 1: Printers -->
-                                <div class="col">
-                                    <h6 class="fw-bold text-black">Printers</h6>
-                                    <ul class="submenu-list list-unstyled">
-                                        <li><a href="#">Inkjet Printers</a></li>
-                                        <li><a href="#">Laser Printers</a></li>
-                                        <li><a href="#">All-in-One Printers</a></li>
-                                        <li><a href="#">Photo Printers</a></li>
-                                        <li><a href="#">Portable Printers</a></li>
-                                    </ul>
-                                </div>
-                        
-                                <!-- Column 2: Printer Ink & Accessories -->
-                                <div class="col">
-                                    <h6 class="fw-bold text-black">Printer Ink & Accessories</h6>
-                                    <ul class="submenu-list list-unstyled">
-                                        <li><a href="#">Ink Cartridges</a></li>
-                                        <li><a href="#">Toner Cartridges</a></li>
-                                        <li><a href="#">Refill Kits</a></li>
-                                        <li><a href="#">Printer Paper</a></li>
-                                        <li><a href="#">Printer Cables</a></li>
-                                    </ul>
-                                </div>
-                        
-                                <!-- Column 3: Promo Image -->
-                                <div class="col d-flex justify-content-end rounded-2">
-                                    <div class="promo-box bg-body-secondary p-4 text-center"
-                                        style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
-                                        <div>
-                                            <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Hot Deal! Save 30%</span>
-                                            <h4 class="fw-bold fs-3 text-black mb-3">HP LaserJet Pro <br> Wireless Printer</h4>
+                            <div class="submenu position-absolute bg-white p-4 shadow rounded d-flex"
+                                style="width: 800px; display: none;">
+                                <div class="row w-100">
+                                    <!-- Column 1: Printers -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Printers</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Inkjet Printers</a></li>
+                                            <li><a href="#">Laser Printers</a></li>
+                                            <li><a href="#">All-in-One Printers</a></li>
+                                            <li><a href="#">Photo Printers</a></li>
+                                            <li><a href="#">Portable Printers</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Printer Ink & Accessories -->
+                                    <div class="col">
+                                        <h6 class="fw-bold text-black">Printer Ink & Accessories</h6>
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Ink Cartridges</a></li>
+                                            <li><a href="#">Toner Cartridges</a></li>
+                                            <li><a href="#">Refill Kits</a></li>
+                                            <li><a href="#">Printer Paper</a></li>
+                                            <li><a href="#">Printer Cables</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Promo Image -->
+                                    <div class="col d-flex justify-content-end rounded-2">
+                                        <div class="promo-box bg-body-secondary p-4 text-center"
+                                            style="max-width: 300px; min-height: 550px; padding: 50px; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div>
+                                                <span class="promo-text badge bg-danger text-white px-3 py-1 mb-3">Hot
+                                                    Deal! Save 30%</span>
+                                                <h4 class="fw-bold fs-3 text-black mb-3">HP LaserJet Pro <br> Wireless
+                                                    Printer</h4>
+                                            </div>
+                                            <img src="/images/categoery-submenu/06.png"
+                                                alt="HP LaserJet Pro Wireless Printer" class="img-fluid rounded"
+                                                style="max-width: 100%; height: auto;">
+                                            <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
                                         </div>
-                                        <img src="/images/categoery-submenu/06.png" alt="HP LaserJet Pro Wireless Printer"
-                                            class="img-fluid rounded" style="max-width: 100%; height: auto;">
-                                        <a href="#" class="btn btn-danger mt-1 px-3 py-2">Shop now</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         </li>
 
                         <li class="dropdown-item category-item">
@@ -748,28 +755,166 @@
 
 
 
-<!-- ************************************************************************************************************************************************** -->
-                <!-- Navigation Links -->
-                <div class="col-md-auto justify-content-center">
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Account</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Pages</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Docs</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Components</a></li>
+                <!-- ************************************************************************************************************************************************** -->
+                
+                <div class="col d-flex justify-content-center" >
+                    <ul class="nav fs-5">
+                      
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Home 1</a></li>
+                                <li><a class="dropdown-item" href="#">Home 2</a></li>
+                                <li><a class="dropdown-item" href="#">Home 3</a></li>
+                            </ul>
+                        </li>
+                
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu" style="margin-top: 20px;">
+                                <li class="nav-item dropdown">
+                                    <div class="dropdown-menu mega-menu p-4" aria-labelledby="shopDropdown">
+                                        <div class="row">
+                                           
+                                            <div class="col-md-3">
+                                                <h6 class="dropdown-header text-black">Electronics Store</h6>
+                                                <a class="dropdown-item text-black" href="#">Categories Page</a>
+                                                <a class="dropdown-item text-black" href="#">Catalog with Side Filters</a>
+                                                <a class="dropdown-item text-black" href="#">Product General Info</a>
+                                                <a class="dropdown-item text-black" href="#">Product Details</a>
+                                                <a class="dropdown-item text-black" href="#">Product Reviews</a>
+                                
+                                                <h6 class="dropdown-header text-black mt-3">Furniture Store</h6>
+                                                <a class="dropdown-item text-black" href="#">Catalog with Top Filters</a>
+                                                <a class="dropdown-item text-black" href="#">Product Page</a>
+                                
+                                                <h6 class="dropdown-header text-black mt-3">Fashion Store</h6>
+                                                <a class="dropdown-item text-black" href="#">Catalog with Side Filters</a>
+                                                <a class="dropdown-item text-black" href="#">Product Page</a>
+                                            </div>
+                                
+                                            
+                                            <div class="col-md-3">
+                                                <h6 class="dropdown-header text-black">Grocery Store</h6>
+                                                <a class="dropdown-item text-black" href="#">Catalog with Side Filters</a>
+                                                <a class="dropdown-item text-black" href="#">Product Page</a>
+                                                
+                                                <h6 class="dropdown-header text-black mt-3">Marketplace</h6>
+                                                <a class="dropdown-item text-black" href="#">Catalog with Top Filters</a>
+                                                <a class="dropdown-item text-black" href="#">Digital Product Page</a>
+                                                <a class="dropdown-item text-black" href="#">Cart / Checkout</a>
+                                            </div>
+                                
+                                            
+                                            <div class="col-md-3">
+                                                <h6 class="dropdown-header text-black">Checkout v.1</h6>
+                                                <a class="dropdown-item text-black" href="#">Shopping Cart</a>
+                                                <a class="dropdown-item text-black" href="#">Delivery Info (Step 1)</a>
+                                                <a class="dropdown-item text-black" href="#">Delivery Info (Step 2)</a>
+                                                <a class="dropdown-item text-black" href="#">Shipping Address</a>
+                                                <a class="dropdown-item text-black" href="#">Payment</a>
+                                                <a class="dropdown-item text-black" href="#">Thank You Page</a>
+                                            </div>
+                                
+                                           
+                                            <div class="col-md-3">
+                                                <h6 class="dropdown-header text-black">Checkout v.2</h6>
+                                                <a class="dropdown-item text-black" href="#">Shopping Cart</a>
+                                                <a class="dropdown-item text-black" href="#">Delivery Info</a>
+                                                <a class="dropdown-item text-black" href="#">Pickup from Store</a>
+                                                <a class="dropdown-item text-black" href="#">Thank You Page</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                
+                      
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
+                                Account
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- Auth User -->
+                                <li class="dropdown-item category-item position-relative">
+                                    <span><i class="bi bi-laptop me-2"></i>Auth User</span>
+                                    <i class="bi bi-chevron-right"></i>
+                                    <div class="submenu">
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Sign In</a></li>
+                                            <li><a href="#">Sign Up</a></li>
+                                            <li><a href="#">Password Recovery</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                        
+                                <!-- Shop Owner -->
+                                <li class="dropdown-item category-item position-relative">
+                                    <span><i class="bi bi-laptop me-2"></i>Shop Owner</span>
+                                    <i class="bi bi-chevron-right"></i>
+                                    <div class="submenu">
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Order History</a></li>
+                                            <li><a href="#">Wishlist</a></li>
+                                            <li><a href="#">Payment Methods</a></li>
+                                            <li><a href="#">My Review</a></li>
+                                            <li><a href="#">Personal Info</a></li>
+                                            <li><a href="#">Address</a></li>
+                                            <li><a href="#">Notification</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                        
+                                <!-- Marketplace User -->
+                                <li class="dropdown-item category-item position-relative">
+                                    <span><i class="bi bi-laptop me-2"></i>Marketplace User</span>
+                                    <i class="bi bi-chevron-right"></i>
+                                    <div class="submenu">
+                                        <ul class="submenu-list list-unstyled">
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Sale</a></li>
+                                            <li><a href="#">Payout</a></li>
+                                            <li><a href="#">Purchases</a></li>
+                                            <li><a href="#">Favorite</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        
+                
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
+
 
                 <!-- Language Selector -->
                 <div class="col-md-auto ms-auto">
                     <select id="language-select" class="form-select form-select-sm">
                         <option value="en">English</option>
-                        <option value="hi">Hindi</option>
-                        <option value="mr">Marathi</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="mr">मराठी</option>
                     </select>
                 </div>
-            
+
             </div>
         </div>
     </header>
@@ -781,7 +926,7 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
-            
+
             <div class="mb-3">
                 <div class="input-group">
                     <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
@@ -789,7 +934,7 @@
                 </div>
             </div>
 
-            
+
             <div class="mb-3">
                 <button class="btn btn-light w-100 dropdown-toggle" type="button" id="mobileCategoryDropdown"
                     data-bs-toggle="dropdown">
@@ -803,7 +948,7 @@
                 </ul>
             </div>
 
-            
+
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#">Shop</a></li>
@@ -815,7 +960,7 @@
         </div>
     </div>
 
-    
+
     <div class="offcanvas offcanvas-end text-bg-dark" id="shoppingCart">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Shopping Cart</h5>
@@ -839,7 +984,7 @@
                 <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
             </div>
 
-           
+
             <div class="carousel-item active" data-bs-interval="3000">
                 <section class="container">
                     <div class="row d-flex align-items-center text-md-start text-center ">
@@ -860,7 +1005,7 @@
                 </section>
             </div>
 
-           
+
             <div class="carousel-item" data-bs-interval="3000">
                 <section class="container">
                     <div class="row d-flex align-items-center text-md-start text-center">
@@ -881,7 +1026,7 @@
                 </section>
             </div>
 
-          
+
             <div class="carousel-item" data-bs-interval="3000">
                 <section class="container">
                     <div class="row d-flex align-items-center text-md-start text-center">
@@ -913,7 +1058,7 @@
 
     <div class="container-fluid mt-4 px-5">
         <div class="row">
-           
+
             <div class="col-12 text-md-end text-start fs-3">
                 <nav class="breadcrumb">
                     <span class="text-dark ps-4">Home > </span>
@@ -921,12 +1066,12 @@
                 </nav>
             </div>
 
-            
+
             <div class="col-12 text-md-start text-center">
                 <h2 class="shop-title fw-bold">Shop Categories</h2>
             </div>
 
-            
+
             <div class="col-12 mt-3">
                 <div class="row brand-logos justify-content-center text-center">
                     <div class="col-6 col-md-4 col-lg-2 mb-3">
