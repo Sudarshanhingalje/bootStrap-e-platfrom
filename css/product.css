@@ -132,3 +132,41 @@
 .product-card:nth-last-child(-n+4) {
     margin-bottom: 50px; /* Add margin to prevent footer sticking */
 }
+body {
+    background-color: #f8f9fa;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-btn {
+    cursor: pointer;
+}
+
+
+.cart-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-text {
+    flex: 1;
+    color: black !important;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    background: white !important;
+    color: black !important;
+    border-bottom: 1px solid #ccc;
+}

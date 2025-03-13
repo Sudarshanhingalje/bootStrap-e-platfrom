@@ -107,3 +107,91 @@ window.addEventListener("popstate", function (event) {
         catalogContainer.classList.add("d-none");
     }
 });
+
+
+
+// shpping cart add productto cart
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(productName, price, imageSrc) {
+    let existingItem = cart.find(item => item.name === productName);
+
+    if (existingItem) {
+        // If product already in cart, increase quantity
+        existingItem.quantity += 1;
+    } else {
+        // If new product, add to cart
+        cart.push({ name: productName, price: price, quantity: 1, image: imageSrc });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartUI();
+}
+
+// Function to update the cart UI
+function updateCartUI() {
+    let cartItems = document.getElementById("cart-items");
+    let cartTotal = document.getElementById("cart-total");
+    let total = 0;
+
+    cartItems.innerHTML = ""; // Clear previous cart items
+
+    cart.forEach(item => {
+        total += item.price * item.quantity; // Calculate total price
+
+        cartItems.innerHTML += `
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="${item.image}" alt="${item.name}" class="cart-img me-2" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                <div>
+                    <strong>${item.name}</strong><br>
+                    <span class="text-black">$${(item.price * item.quantity).toFixed(2)}</span> (x${item.quantity})
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-success" onclick="increaseQuantity('${item.name}')">+</button>
+                    <button class="btn btn-sm btn-warning" onclick="decreaseQuantity('${item.name}')">-</button>
+                    <button class="btn btn-sm btn-danger" onclick="removeFromCart('${item.name}')">❌</button>
+                </div>
+            </li>`;
+    });
+
+    cartTotal.innerText = total.toFixed(2);
+}
+
+// Function to increase quantity
+function increaseQuantity(productName) {
+    let item = cart.find(p => p.name === productName);
+    if (item) {
+        item.quantity += 1;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartUI();
+    }
+}
+
+// Function to decrease quantity
+function decreaseQuantity(productName) {
+    let item = cart.find(p => p.name === productName);
+    if (item && item.quantity > 1) {
+        item.quantity -= 1;
+    } else {
+        cart = cart.filter(p => p.name !== productName); // Remove if quantity is 0
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartUI();
+}
+
+// Function to remove an item from the cart
+function removeFromCart(productName) {
+    cart = cart.filter(item => item.name !== productName);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartUI();
+}
+
+// Function to clear the cart
+function clearCart() {
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartUI();
+}
+
+// Load cart on page load
+window.onload = updateCartUI;
