@@ -44,3 +44,13 @@
         height: 180px; /* Reduce height for smaller screens */
     }
 }
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}

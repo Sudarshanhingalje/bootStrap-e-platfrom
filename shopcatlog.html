@@ -12,51 +12,64 @@
 
 <body>
 
-
-    <div class="container mt-5  d-flex justify-content-center" id="shop-catlog">
-
+    <div class="container mt-5" id="shop-catlog">
         <div class="row justify-content-center align-items-center">
 
+            <!-- Breadcrumb -->
             <div class="col-12 text-md-end text-start fs-3">
                 <nav class="breadcrumb">
                     <span class="text-dark ps-4">Home > </span>
-                    <span class="breadcrumb-item text-secondary ps-2">Categories & catlog</span>
+                    <span class="breadcrumb-item text-secondary ps-2">Categories & Catalog</span>
                 </nav>
             </div>
 
-
+            <!-- Title -->
             <div class="col-12 text-md-start text-center">
-                <h2 class="shop-title fw-bold  ps-4">Shop Catlog</h2>
+                <h2 class="shop-title fw-bold ps-4">Shop Catalog</h2>
             </div>
 
-            <div class="col-md-5">
-                <div class="catalog-card d-flex flex-column flex-md-row align-items-center text-md-start"
-                    style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd ); height: 100%;">
-                    <img src="/large-2x-unscreen.gif" alt="MacBook Air" class="catalog-img me-md-3"
-                        style="width: 300px;">
-                    <div>
+            <!-- First Product (MacBook Air) -->
+            <div class="col-md-6">
+                <div class="catalog-card d-flex flex-column flex-md-row align-items-center text-md-start p-3"
+                    style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd); border-radius: 15px;">
+
+                    <!-- Image -->
+                    <div class="order-md-1">
+                        <img src="/large-2x-unscreen.gif" alt="MacBook Air" class="catalog-img me-md-3 img-fluid"
+                            style="max-width: 250px;">
+                    </div>
+
+                    <!-- Text -->
+                    <div class="order-md-2 text-center text-md-start">
                         <h4>MacBook Air</h4>
                         <p>Apple M2 Chip, 13-inch</p>
-                        <a href="#" class="btn-price">From $1,199 →</a>
+                        <a href="#" class="btn btn-primary">From $1,199 →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-7 mt-3 mt-md-0">
-                <div class="catalog-card d-flex flex-column flex-md-row align-items-center text-md-start"
-                    style="background: linear-gradient(90deg, #fdcbf1 0%, #fdcbf1 1%, #ffecfa 100%);">
-                    <div class="video-circle">
-                        <img src="/samsang-s25-ultra.gif" alt="Samsung Galaxy S25 Ultra" class="w-100 h-auto">
+            <!-- Second Product (Samsung Galaxy S25) -->
+            <div class="col-md-6 mt-3 mt-md-0">
+                <div class="catalog-card d-flex flex-column flex-md-row align-items-center text-md-start p-3"
+                    style="background: linear-gradient(90deg, #fdcbf1 0%, #ffecfa 100%); border-radius: 15px;">
 
+                    <!-- Images -->
+                    <div class="order-md-1 d-flex">
+                        <img src="/samsang-s25-ultra.gif" alt="Samsung Galaxy S25 Ultra"
+                            class="me-md-3 img-fluid" style="max-width: 100px;">
+                        <img src="/images/shopcatlog/s25_ultra.png" alt="Samsung Galaxy S25"
+                            class="catalog-img img-fluid" style="max-width: 150px;">
                     </div>
-                    <img src="/images/shopcatlog/s25_ultra.png" alt="Samsung Galaxy S25" class="catalog-img me-md-3">
-                    <div>
+
+                    <!-- Text -->
+                    <div class="order-md-2 text-center text-md-start">
                         <h4>Samsung Galaxy S25</h4>
                         <p>Dynamic AMOLED 2X, 50MP Camera</p>
-                        <a href="#" class="btn-price">From $799 →</a>
+                        <a href="#" class="btn btn-primary">From $799 →</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
