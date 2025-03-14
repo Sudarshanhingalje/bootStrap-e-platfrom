@@ -34,7 +34,7 @@ document.getElementById("catalogWithFilters").addEventListener("click", function
         });
 });
 
-// Handle Back/Forward Navigation
+
 window.addEventListener("popstate", function (event) {
     let catalogContainer = document.getElementById("catalogContainer");
     if (event.state && event.state.page === "catalog") {
@@ -45,10 +45,9 @@ window.addEventListener("popstate", function (event) {
     }
 });
 
-// Initialize Cart from LocalStorage
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Function to add a product to the cart
 function addToCart(productName, price, imageSrc = "/images/default.png") {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let existingItem = cart.find(item => item.name === productName);
@@ -62,8 +61,14 @@ function addToCart(productName, price, imageSrc = "/images/default.png") {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartUI();
 
-    // Notify other pages of cart changes
+    
     window.dispatchEvent(new Event("storage"));
+    const toastBody = document.querySelector("#cartToast .toast-body");
+    toastBody.innerHTML = `${productName}, item added to cart!`;
+
+  
+    const cartToast = new bootstrap.Toast(document.getElementById('cartToast'));
+    cartToast.show();
 }
 
 // Function to update the cart UI
@@ -156,3 +161,4 @@ function redirectToProductPage() {
 function clicking(smallImg) {
     document.getElementById("imagebox").src = smallImg.src;
 }
+
