@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="/css/singleproduct.css">
+</head>
+
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Product page</li>
+        </ol>
+    </nav>
+
+    <h2 class="fw-bold">Apple iPhone 14 Plus 128GB Blue</h2>
+    <hr>
+    <div class="container mt-4">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#general">General info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#details">Product details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#reviews">Reviews (68)</a>
+            </li>
+
+        </ul>
+
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-3">
+            <div id="general" class="tab-pane fade show active">
+                <div class="container my-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="all-images d-flex flex-column">
+                                <div class="main-images text-center">
+                                    <img id="imagebox" src="/images/products/02(1).png" alt="Product Image">
+                                </div>
+                                <div class="small-images d-flex justify-content-center mt-3">
+                                    <img src="/images/products/02(1).png" onclick="clicking(this)">
+                                    <img src="/images/products/02(2).png" onclick="clicking(this)">
+                                    <img src="/images/products/02(3).png" onclick="clicking(this)">
+                                    <img src="/images/products/02(4).png" onclick="clicking(this)">
+                                    <img src="/images/products/02(5).png" onclick="clicking(this)">
+                                    <img src="/images/products/02(6).png" onclick="clicking(this)">
+                                    <img src="/images/products/02(7).png" onclick="clicking(this)">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Product Details Section -->
+                        <div class="col-lg-6">
+                            <h5>Model</h5>
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-outline-dark">64 GB</button>
+                                <button class="btn btn-dark active">128 GB</button>
+                                <button class="btn btn-outline-dark">256 GB</button>
+                                <button class="btn btn-outline-dark">512 GB</button>
+                            </div>
+
+                            <h5 class="mt-3">Color: <span class="text-muted">Gray blue</span></h5>
+                            <div>
+                                <button class="btn btn-light border rounded-circle p-3"></button>
+                                <button class="btn btn-danger border rounded-circle p-3"></button>
+                                <button class="btn btn-success border rounded-circle p-3"></button>
+                                <button class="btn btn-primary border rounded-circle p-3"></button>
+                            </div>
+
+                            <h2 class="mt-4">$940.00</h2>
+                            <p class="text-success"><i class="fas fa-check-circle"></i> Available to order</p>
+
+                            <div class="d-flex align-items-center">
+                                <button class="btn btn-outline-secondary">-</button>
+                                <span class="px-3">1</span>
+                                <button class="btn btn-outline-secondary">+</button>
+                                <button class="btn btn-danger ms-3"><i class="fas fa-shopping-cart"></i> Add to
+                                    cart</button>
+                                <button class="btn btn-outline-secondary ms-2"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-outline-secondary ms-2"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+
+                            <h4 class="mt-4">Shipping options</h4>
+                            <table class="table">
+                                <tr>
+                                    <td>Pickup from the store</td>
+                                    <td>Today</td>
+                                    <td class="text-success">Free</td>
+                                </tr>
+                                <tr>
+                                    <td>Pickup from postal offices</td>
+                                    <td>Tomorrow</td>
+                                    <td class="text-danger">$25.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivery by courier</td>
+                                    <td>2-3 days</td>
+                                    <td class="text-danger">$35.00</td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-outline-primary"><i class="fas fa-map-marker-alt"></i> Find local
+                                store</button>
+                            <div class="mt-4">
+                                <button class="btn btn-outline-dark w-100 text-start" data-bs-toggle="collapse"
+                                    data-bs-target="#warrantyInfo">
+                                    Warranty information <i class="fas fa-chevron-down float-end"></i>
+                                </button>
+                                <div id="warrantyInfo" class="collapse mt-2">
+                                    <p>1-year standard warranty included.</p>
+                                </div>
+
+                                <button class="btn btn-outline-dark w-100 text-start mt-2" data-bs-toggle="collapse"
+                                    data-bs-target="#paymentInfo">
+                                    Payment and credit <i class="fas fa-chevron-down float-end"></i>
+                                </button>
+                                <div id="paymentInfo" class="collapse mt-2">
+                                    <p>Multiple payment options available, including installment plans.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container my-5">
+            <div class="bundle-section">
+                <h4 class="text-center mb-4">Cheaper together</h4>
+
+                <!-- Desktop View -->
+                <div class="row justify-content-center desktop-view">
+                    <div class="col-md-6">
+                        <div class="product-card">
+                            <input type="checkbox" checked>
+                            <img src="/images/products/02(1).png" alt="iPhone">
+                            <p>Apple iPhone 14 128GB White</p>
+                            <p class="price">$940.00</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="product-card">
+                            <input type="checkbox" checked>
+                            <img src="/images/products/06.png" alt="AirPods">
+                            <p>Headphones Apple AirPods 2 Pro</p>
+                            <span class="discount-badge">-32%</span>
+                            <p class="price">$224.00 <span class="old-price">$330.00</span></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="product-card">
+                            <input type="checkbox">
+                            <img src="/images/products/15.png" alt="Wireless Charger">
+                            <p>Wireless charger for iPhone</p>
+                            <span class="discount-badge">-48%</span>
+                            <p class="price">$26.00 <span class="old-price">$50.00</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile View: First 2 Products + Carousel for 3rd -->
+                <div class="row mobile-view">
+                    <div class="col-6">
+                        <div class="product-card">
+                            <input type="checkbox" checked>
+                            <img src="" alt="iPhone">
+                            <p>Apple iPhone 14 128GB White</p>
+                            <p class="price">$940.00</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="product-card">
+                            <input type="checkbox" checked>
+                            <img src="https://via.placeholder.com/120" alt="AirPods">
+                            <p>Headphones Apple AirPods 2 Pro</p>
+                            <span class="discount-badge">-32%</span>
+                            <p class="price">$224.00 <span class="old-price">$330.00</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Carousel for 3rd Product -->
+                    <div id="productCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="product-card">
+                                    <input type="checkbox">
+                                    <img src="https://via.placeholder.com/120" alt="Wireless Charger">
+                                    <p>Wireless charger for iPhone</p>
+                                    <span class="discount-badge">-48%</span>
+                                    <p class="price">$26.00 <span class="old-price">$50.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Total Section -->
+                <div class="total-section">
+                    <p>Total for selected products</p>
+                    <h3>$1,164.00</h3>
+                    <button class="btn btn-danger"
+                        onclick="addToCart('Apple iPhone 14 128GB White', 899.00, 'iphone14.jpg')">
+                        Purchase together
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="container mt-5">
+            <h2 class="text-center mb-4">Trending Products on Trendora</h2>
+
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+                        <div class="carousel-inner">
+                    
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <!-- Apple iPhone 14 -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/02(1).png" class="product-img img-fluid">
+                                            <h6>Apple iPhone 14 128GB White</h6>
+                                            <p class="price">$899.00 <s class="text-secondary">$999.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('Apple iPhone 14 128GB White', 899.00, '/images/products/02(1).png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Smart Watch Series 7 -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/03.png" class="product-img img-fluid">
+                                            <h6>Smart Watch Series 7</h6>
+                                            <p class="price">$499.00 <s class="text-secondary">$799.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('Smart Watch Series 7', 499.00, '/images/products/03.png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- VRB01 Virtual Reality Glasses -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/01(1).png" class="product-img img-fluid">
+                                            <h6>VRB01 Virtual Reality Glasses</h6>
+                                            <p class="price">$340.00 <s class="text-secondary">$430.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('VRB01 Virtual Reality Glasses', 340.00, '/images/products/01(1).png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Apple AirPods Pro 2 -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/06.png" class="product-img img-fluid">
+                                            <h6>Apple AirPods Pro 2</h6>
+                                            <p class="price">$224.00 <s class="text-secondary">$299.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('Apple AirPods Pro 2', 224.00, '/images/products/06.png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                           
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <!-- Wireless Earbuds -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/05.png" class="product-img img-fluid">
+                                            <h6>Wireless Earbuds</h6>
+                                            <p class="price">$199.00 <s class="text-secondary">$299.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('Wireless Earbuds', 199.00,'/images/products/05.png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Portable Speaker -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/16.png" class="product-img img-fluid">
+                                            <h6>Portable Speaker</h6>
+                                            <p class="price">$89.00 <s class="text-secondary">$129.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('Portable Speaker',89.00,'/images/products/16.png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Gaming Headset -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/08.png" class="product-img img-fluid">
+                                            <h6>Gaming Headset</h6>
+                                            <p class="price">$149.00 <s class="text-secondary">$199.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('Gaming Headset',149.00,'/images/products/08.png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Mechanical Keyboard -->
+                                    <div class="col-md-3">
+                                        <div class="product-card p-3 rounded">
+                                            <img src="/images/products/07.png" class="product-img img-fluid">
+                                            <h6>Mechanical Keyboard</h6>
+                                            <p class="price">$99.00 <s class="text-secondary">$149.00</s></p>
+                                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                                onclick="addToCart('Mechanical Keyboard',99.00,'/images/products/07.png')">
+                                                <i class="fas fa-shopping-cart"></i> Add to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev text-black" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon  "style="Color:Black"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Left Column - Product Details -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Product details</h2>
+
+                    <!-- General Specs -->
+                    <h5 class="mt-4 fw-bold">General specs</h5>
+                    <div class="spec-item">
+                        <span>Model:</span>
+                        <span class="dotted-line"></span>
+                        <span>iPhone 14 Plus</span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Manufacturer:</span>
+                        <span class="dotted-line"></span>
+                        <span>Apple Inc.</span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Finish:</span>
+                        <span class="dotted-line"></span>
+                        <span>Ceramic, Glass, Aluminium <i class="fa fa-info-circle"></i></span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Capacity:</span>
+                        <span class="dotted-line"></span>
+                        <span>128GB</span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Chip:</span>
+                        <span class="dotted-line"></span>
+                        <span>A15 Bionic chip</span>
+                    </div>
+
+                    <!-- Display -->
+                    <h5 class="mt-4 fw-bold">Display</h5>
+                    <div class="spec-item">
+                        <span>Diagonal:</span>
+                        <span class="dotted-line"></span>
+                        <span>6.1"</span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Screen type:</span>
+                        <span class="dotted-line"></span>
+                        <span>Super Retina XDR <i class="fa fa-info-circle"></i></span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Resolution:</span>
+                        <span class="dotted-line"></span>
+                        <span>2778×1284px at 458ppi</span>
+                    </div>
+                    <div class="spec-item">
+                        <span>Refresh rate:</span>
+                        <span class="dotted-line"></span>
+                        <span>120 Hz</span>
+                    </div>
+
+                    <!-- Link -->
+                    <button class="btn btn-danger fw-bold d-block mt-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#productDetails" aria-expanded="false">
+                        See all product details &rarr;
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="collapse mt-3" id="productDetails">
+                        <!-- Camera Section -->
+                        <h5 class="fw-bold">Camera</h5>
+                        <div class="spec-item">
+                            <span>Front camera:</span>
+                            <span class="dotted-line"></span>
+                            <span>12MP</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Main camera:</span>
+                            <span class="dotted-line"></span>
+                            <span>12MP Ultra Wide</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Zoom:</span>
+                            <span class="dotted-line"></span>
+                            <span>2x optical, 5x digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Video:</span>
+                            <span class="dotted-line"></span>
+                            <span>4K video recording <i class="fa fa-info-circle"></i></span>
+                        </div>
+
+                        <!-- Power and Battery Section -->
+                        <h5 class="mt-4 fw-bold">Power and Battery</h5>
+                        <div class="spec-item">
+                            <span>Fast charging:</span>
+                            <span class="dotted-line"></span>
+                            <span>Yes</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Wireless charging:</span>
+                            <span class="dotted-line"></span>
+                            <span>Yes</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Charging power:</span>
+                            <span class="dotted-line"></span>
+                            <span>up to 15W</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Video playback:</span>
+                            <span class="dotted-line"></span>
+                            <span>Up to 26 hours</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Audio playback:</span>
+                            <span class="dotted-line"></span>
+                            <span>Up to 100 hours</span>
+                        </div>
+
+                        <!-- Size and Weight Section -->
+                        <h5 class="mt-4 fw-bold">Size and Weight</h5>
+                        <div class="spec-item">
+                            <span>Height:</span>
+                            <span class="dotted-line"></span>
+                            <span>160.8 mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Width:</span>
+                            <span class="dotted-line"></span>
+                            <span>78.1 mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>Weight:</span>
+                            <span class="dotted-line"></span>
+                            <span>203 grams</span>
+                        </div>
+
+                        <!-- Product Specifications Notice -->
+                        <div class="alert alert-light border mt-4" role="alert">
+                            <i class="fa fa-info-circle"></i> Product specifications and equipment are subject to change
+                            without notice.
+                        </div>
+
+                        <!-- Contact Button -->
+                        <h6 class="mt-3">Do you have any questions?</h6>
+                        <button class="btn btn-danger">Contact us</button>
+                    </div>
+                    <!-- ***************************************************review************************************************************ -->
+
+                    <div class="col-md-6">
+                        <h3>Reviews</h3>
+
+                        <!-- Rating Overview -->
+                        <div class="d-flex align-items-center">
+                            <h1 class="me-3">4.1</h1>
+                            <div>
+                                <div class="text-warning">
+                                    ★★★★☆
+                                </div>
+                                <p class="small text-muted">68 reviews</p>
+                            </div>
+                        </div>
+
+                        <!-- Rating Distribution -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">5 ★</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" style="width: 60%;"></div>
+                                </div>
+                                <span class="ms-2">37</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">4 ★</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" style="width: 30%;"></div>
+                                </div>
+                                <span class="ms-2">16</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">3 ★</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" style="width: 15%;"></div>
+                                </div>
+                                <span class="ms-2">9</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">2 ★</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" style="width: 10%;"></div>
+                                </div>
+                                <span class="ms-2">4</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">1 ★</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" style="width: 5%;"></div>
+                                </div>
+                                <span class="ms-2">3</span>
+                            </div>
+                        </div>
+
+                        <!-- Leave a Review Button -->
+                        <button class="btn btn-outline-primary mb-3">Leave a review</button>
+
+                        <!-- Reviews Section -->
+                        <div class="review">
+                            <h6 class="fw-bold">Rafael Marquez</h6>
+                            <p class="text-muted">June 28, 2024</p>
+                            <p class="text-warning">★★★★★</p>
+                            <p><strong>Color:</strong> Blue &nbsp; | &nbsp; <strong>Model:</strong> 128GB</p>
+                            <p>The phone has a new A15 Bionic chip, making it lightning-fast and responsive. The camera
+                                system has been upgraded, now including a 12MP ultra-wide lens and a 12MP wide lens.</p>
+                            <p><strong>Pros:</strong> Powerful A15 Bionic chip, improved camera</p>
+                            <p><strong>Cons:</strong> High price tag</p>
+                            <button class="btn btn-sm btn-outline-secondary">Reply</button>
+                            <button class="btn btn-sm btn-outline-success ms-2"><i class="fa fa-thumbs-up"></i>
+                                0</button>
+                            <button class="btn btn-sm btn-outline-danger ms-2"><i class="fa fa-thumbs-down"></i>
+                                0</button>
+                        </div>
+
+                        <hr>
+
+                        <div class="review">
+                            <h6 class="fw-bold">Daniel Adams</h6>
+                            <p class="text-muted">May 15, 2024</p>
+                            <p class="text-warning">★★★★☆</p>
+                            <p><strong>Color:</strong> Blue &nbsp; | &nbsp; <strong>Model:</strong> 128GB</p>
+                            <p>The phone has a new A15 Bionic chip, making it lightning-fast and responsive. The camera
+                                system has been upgraded, now including a 12MP ultra-wide lens and a 12MP wide lens.</p>
+                            <p><strong>Pros:</strong> Powerful A15 Bionic chip, improved camera</p>
+                            <p><strong>Cons:</strong> High price tag</p>
+                            <button class="btn btn-sm btn-outline-secondary">Reply</button>
+                            <button class="btn btn-sm btn-outline-success ms-2"><i class="fa fa-thumbs-up"></i>
+                                18</button>
+                            <button class="btn btn-sm btn-outline-danger ms-2"><i class="fa fa-thumbs-down"></i>
+                                2</button>
+                        </div>
+
+                        <hr>
+
+                        <!-- Collapsible Reviews Section -->
+                        <button class="btn btn-link text-danger fw-bold d-block mt-3" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#moreReviews">
+                            See all reviews &rarr;
+                        </button>
+
+                        <div class="collapse" id="moreReviews">
+                            <div class="review mt-3">
+                                <h6 class="fw-bold">Emily Johnson</h6>
+                                <p class="text-muted">April 20, 2024</p>
+                                <p class="text-warning">★★★★★</p>
+                                <p><strong>Color:</strong> Black &nbsp; | &nbsp; <strong>Model:</strong> 256GB</p>
+                                <p>Battery life is amazing, and the display is very smooth. Worth the price!</p>
+                                <p><strong>Pros:</strong> Great battery, fast performance</p>
+                                <p><strong>Cons:</strong> Slightly heavy</p>
+                                <button class="btn btn-sm btn-outline-secondary">Reply</button>
+                                <button class="btn btn-sm btn-outline-success ms-2"><i class="fa fa-thumbs-up"></i>
+                                    10</button>
+                                <button class="btn btn-sm btn-outline-danger ms-2"><i class="fa fa-thumbs-down"></i>
+                                    1</button>
+                            </div>
+
+                            <hr>
+
+                            <div class="review">
+                                <h6 class="fw-bold">Michael Brown</h6>
+                                <p class="text-muted">March 10, 2024</p>
+                                <p class="text-warning">★★★☆☆</p>
+                                <p><strong>Color:</strong> Silver &nbsp; | &nbsp; <strong>Model:</strong> 128GB</p>
+                                <p>Good phone but overpriced. The camera is great, but I expected better battery life.
+                                </p>
+                                <p><strong>Pros:</strong> Camera, design</p>
+                                <p><strong>Cons:</strong> Overpriced, average battery</p>
+                                <button class="btn btn-sm btn-outline-secondary">Reply</button>
+                                <button class="btn btn-sm btn-outline-success ms-2"><i class="fa fa-thumbs-up"></i>
+                                    5</button>
+                                <button class="btn btn-sm btn-outline-danger ms-2"><i class="fa fa-thumbs-down"></i>
+                                    3</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ***************************************************review-end here************************************************************ -->
+
+
+                <!-- Right Column - Product Card -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm  border rounded-3" style="max-width: 300px; margin: auto;">
+                        <div class="card-body text-center p-2">
+
+                            <img src="/images/products/01.png" alt="iPhone" class="img-fluid mb-2"
+                                style="max-width: 70%; height: auto; border-radius: 8px;">
+
+                            <!-- Product Title -->
+                            <div class="d-flex justify-content-center align-items-center mb-2">
+                                <h6 class="text-dark fw-semibold mb-0">Apple iPhone 14 Plus 128GB Blue</h6>
+                            </div>
+
+                            <!-- Price -->
+                            <h5 class="fw-bold text-dark" style="font-size: 18px;">$940.00</h5>
+
+                            <!-- Star Rating -->
+                            <div class="d-flex justify-content-start align-items-center gap-1 mb-2">
+                                <i class="fa fa-star text-warning small"></i>
+                                <i class="fa fa-star text-warning small"></i>
+                                <i class="fa fa-star text-warning small"></i>
+                                <i class="fa fa-star text-warning small"></i>
+                                <i class="fa fa-star-half-alt text-warning small"></i>
+                                <span class="ms-1 text-muted small">68</span>
+                            </div>
+
+                            <!-- Add to Cart Button -->
+
+                            <button class="cart-btn btn btn-success btn-sm ms-auto"
+                                onclick="addToCart('Apple iPhone 14 128GB White', 940.00, '/images/products/01.png')">
+                                <i class="fas fa-shopping-cart"></i> Add to cart
+                            </button>
+
+
+                            <!-- Action Buttons -->
+                            <div class="mt-3 d-flex justify-content-center gap-2">
+                                <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i
+                                        class="fa fa-heart"></i></button>
+                                <button class="btn btn-light btn-sm rounded-circle shadow-sm"><i
+                                        class="fa fa-sync-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div id="details" class="tab-pane fade">
+                    <p>Product specifications and details.</p>
+                </div>
+                <div id="reviews" class="tab-pane fade">
+                    <p>Customer reviews and ratings.</p>
+                </div>
+            </div>
+
+            <!-- Rating -->
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="script.js"></script>
+</body>
+
+</html>

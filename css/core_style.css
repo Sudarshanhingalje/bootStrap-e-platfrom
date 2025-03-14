@@ -1,0 +1,10 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.carousel-inner img {
+  max-height: 400px;
+  object-fit: cover;
+}
+button {
+  margin-top: 10px;
+}

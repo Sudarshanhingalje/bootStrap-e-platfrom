@@ -300,16 +300,21 @@
 
 
     <!-- Shopping Cart Offcanvas -->
-    <div class="offcanvas offcanvas-end text-bg-dark text-black" id="shoppingCart">
+    <div class="offcanvas offcanvas-end text-bg-dark text-white" id="shoppingCart">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title text-white">Shopping Cart</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
-        <div class="offcanvas-body d-flex flex-column  text-black">
+        <div class="offcanvas-body d-flex flex-column text-white">
             <ul id="cart-items" class="list-group list-group-flush"></ul>
             <hr>
-            <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
-            <button class="btn btn-danger w-100" onclick="clearCart()">Clear Cart</button>
+            <p><strong>Total: $<span id="cart-total">0.00</span></strong><button class="btn btn-danger w-100 text-white" onclick="clearCart()">Clear Cart</button></p>
+            
+          
+        <button class="btn w-100 bg-body-secondary text-black" >view Cart</button><br><hr>
+        <button class="btn w-100 bg-success text-white" onclick="window.location.href='checkout.html'">
+            Checkout
+        </button>
         </div>
     </div>
 
@@ -695,7 +700,7 @@
                             </div>
         
         
-                            <img src="/images/products/02(1).png" alt="Apple iPhone 14 128GB White" class="product-img">  
+                            <img src="/images/products/02(1).png" alt="Apple iPhone 14 128GB White" class="product-img" onclick="redirectToProductPage()">  
         
         
                             <div class="d-flex align-items-center mt-3">
@@ -712,7 +717,7 @@
                                 <span class="price fw-bold text-black fs-5">$899.00 &nbsp;<s
                                         class="text-secondary">$299.00</s></span>
                                 <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                    onclick="addToCart('Apple iPhone 14 128GB White', 899.00)">
+                                    onclick="addToCart('Apple iPhone 14 128GB White', 899.00,'/images/products/02(1).png')">
                                     <i class="fas fa-shopping-cart"></i>
                                 </button>
                             </div>
@@ -755,7 +760,7 @@
                                 <span class="price fw-bold text-black fs-5">$499.00 &nbsp;<s
                                         class="text-secondary">$799.00</s></span>
                                 <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                    onclick="addToCart('Smart Watch Series 7, White', 499.00)">
+                                    onclick="addToCart('Smart Watch Series 7, White', 499.00,'/images/products/03.png')">
                                     <i class="fas fa-shopping-cart"></i>
                                 </button>
                             </div>
@@ -795,7 +800,7 @@
                                 <span class="price fw-bold text-black fs-5">$340.00 &nbsp;<s
                                         class="text-secondary">$430.00</s></span>
                                 <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                    onclick="addToCart('>VRB01 Virtual Reality Glasses', 430.00)">
+                                    onclick="addToCart('>VRB01 Virtual Reality Glasses', 430.00,'/images/products/01(1).png')">
                                     <i class="fas fa-shopping-cart"></i>
                                 </button>
                             </div>
@@ -826,7 +831,7 @@
                                 <span class="price fw-bold text-black fs-5">$224.00 &nbsp;
                                     <s class="text-secondary">$430.00</s></span>
                                 <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                    onclick="addToCart('>Headphones Apple AirPods 2 Pro', 224.00)">
+                                    onclick="addToCart('>Headphones Apple AirPods 2 Pro', 224.00,'/images/products/06.png')">
                                     <i class="fas fa-shopping-cart"></i>
                                 </button>
                             </div>
@@ -865,7 +870,7 @@
                                     <span $1,200.00 class="price fw-bold text-black fs-5">$1,200.00 &nbsp;
                                         <s class="text-secondary">$1600.00</s></span>
                                     <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                        onclick="addToCart('Laptop Apple MacBook Pro 13 M2', 1200.00)">
+                                        onclick="addToCart('Laptop Apple MacBook Pro 13 M2', 1200.00,'/images/products/04.png')">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
@@ -896,7 +901,7 @@
                                     <span $1,200.00 class="price fw-bold text-black fs-5">$540.00 &nbsp;
                                         <s class="text-secondary">$790.00</s></span>
                                     <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                        onclick="addToCart('Tablet Apple iPad Air M1', 540.00)">
+                                        onclick="addToCart('Tablet Apple iPad Air M1', 540.00,'/images/products/05.png')">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
@@ -940,7 +945,7 @@
                                     <span $1,200.00 class="price fw-bold text-black fs-5">$540.00 &nbsp;
                                         <s class="text-secondary">$790.00</s></span>
                                     <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                        onclick="addToCart('Tablet Apple iPad Air M1', 540.00)">
+                                        onclick="addToCart('Tablet Apple iPad Air M1', 540.00,'/images/products/14.png')">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
@@ -978,7 +983,7 @@
                                     <span $1,200.00 class="price fw-bold text-black fs-5">$299.00 &nbsp;
                                         <s class="text-secondary">$250.00</s></span>
                                     <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                        onclick="addToCart('Wireless Bluetooth Headphones Sony', 299.00)">
+                                        onclick="addToCart('Wireless Bluetooth Headphones Sony', 299.00,'/images/products/08.png')">
                                         <i class="fas fa-shopping-cart"></i>
                                     </button>
                                 </div>
@@ -1005,7 +1010,14 @@
 
 
 
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    updateCartUI();
+});
+window.addEventListener("storage", function() {
+    updateCartUI();
+});
+</script>
 
 
 
