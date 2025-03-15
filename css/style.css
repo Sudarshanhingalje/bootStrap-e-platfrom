@@ -276,7 +276,7 @@ html {
 
 /* Dropdown items styling */
 .dropdown-item {
-    color: #fff !important;
+    color: #060000 !important;
     padding: 10px;
     cursor: pointer;
     display: flex;
@@ -287,7 +287,7 @@ html {
 }
 
 .dropdown-item:hover {
-    background-color: #444 !important;
+    background-color: #ede6e6 !important;
 }
 /* Dropdown Animation */
 @keyframes fadeIn {
@@ -382,29 +382,7 @@ html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Category Menu */
-.category-menu {
-    width: 300px;
-    background: #ffffff;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-}
 
-.category-item {
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.category-item:hover {
-    background: #f6f7f89e;
-    color: black;
-    border-radius: 10px;
-}
 
 /* Submenu */
 .submenu {
@@ -656,4 +634,15 @@ html {
 
 .underline-hover:hover::after {
     transform: scaleX(1);
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.product-img {
+    max-height: 150px;
+    object-fit: contain;
 }

@@ -72,6 +72,7 @@ window.addEventListener("popstate", function (event) {
     }
 });
 
+// adding and deleting element from the cart
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -99,35 +100,36 @@ function addToCart(productName, price, imageSrc = "/images/default.png") {
 }
 
 // Function to update the cart UI
-function updateCartUI() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let cartItems = document.getElementById("cart-items");
-    let cartTotal = document.getElementById("cart-total");
+// function updateCartUI() {
+//     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//     let cartItems = document.getElementById("cart-items");
+//     let cartTotal = document.getElementById("cart-total");
 
-    if (!cartItems || !cartTotal) return; 
+//     if (!cartItems || !cartTotal) return; 
 
-    let total = 0;
-    cartItems.innerHTML = "";
+//     let total = 0;
+//     cartItems.innerHTML = "";
 
-    cart.forEach(item => {
-        total += item.price * item.quantity;
-        cartItems.innerHTML += `
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <img src="${item.image}" alt="${item.name}" class="cart-img me-2" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
-                <div>
-                    <strong>${item.name}</strong><br>
-                    <span class="text-black">$${(item.price * item.quantity).toFixed(2)}</span> (x${item.quantity})
-                </div>
-                <div class="d-flex gap-2">
-                    <button class="btn btn-sm btn-success" onclick="increaseQuantity('${item.name}')">+</button>
-                    <button class="btn btn-sm btn-warning" onclick="decreaseQuantity('${item.name}')">-</button>
-                    <button class="btn btn-sm btn-danger" onclick="removeFromCart('${item.name}')">❌</button>
-                </div>
-            </li>`;
-    });
+//     cart.forEach(item => {
+//         total += item.price * item.quantity;
+//         cartItems.innerHTML += `
+//             <li class="list-group-item d-flex justify-content-between align-items-center">
+//                 <img src="${item.image}" alt="${item.name}" class="cart-img me-2" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+//                 <div>
+//                     <strong>${item.name}</strong><br>
+//                     <span class="text-black">$${(item.price * item.quantity).toFixed(2)}</span> (x${item.quantity})
+//                 </div>
+//                 <div class="d-flex gap-2">
+//                     <button class="btn btn-sm btn-success" onclick="increaseQuantity('${item.name}')">+</button>
+//                     <button class="btn btn-sm btn-warning" onclick="decreaseQuantity('${item.name}')">-</button>
+//                     <button class="btn btn-sm btn-danger" onclick="removeFromCart('${item.name}')">❌</button>
+//                 </div>
+//             </li>`;
+//     });
 
-    cartTotal.innerText = total.toFixed(2);
-}
+//     cartTotal.innerText = total.toFixed(2);
+// }
+
 
 // Function to increase product quantity
 function increaseQuantity(productName) {
@@ -179,6 +181,49 @@ window.addEventListener("storage", function () {
     updateCartUI();
 });
 
+
+// Function to update the cart UI
+function updateCartUI() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartItems = document.getElementById("cart-items");
+    let cartTotal = document.getElementById("cart-total");
+    let cartBadge = document.getElementById("cart-badge"); // Badge element
+
+    if (!cartItems || !cartTotal || !cartBadge) return;
+
+    let total = 0;
+    let totalItems = 0;
+    cartItems.innerHTML = "";
+
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+        totalItems += item.quantity; // Count total items in the cart
+
+        cartItems.innerHTML += `
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <img src="${item.image}" alt="${item.name}" class="cart-img me-2" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                <div>
+                    <strong>${item.name}</strong><br>
+                    <span class="text-black">$${(item.price * item.quantity).toFixed(2)}</span> (x${item.quantity})
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-success" onclick="increaseQuantity('${item.name}')">+</button>
+                    <button class="btn btn-sm btn-warning" onclick="decreaseQuantity('${item.name}')">-</button>
+                    <button class="btn btn-sm btn-danger" onclick="removeFromCart('${item.name}')">❌</button>
+                </div>
+            </li>`;
+    });
+
+    cartTotal.innerText = total.toFixed(2);
+    
+    // Update badge count
+    cartBadge.innerText = totalItems;
+    cartBadge.style.display = totalItems > 0 ? "inline-block" : "none"; // Hide if empty
+}
+
+
+
+
 // Redirect to Product Page
 function redirectToProductPage() {
     window.location.href = "productpage.html";
@@ -189,3 +234,69 @@ function clicking(smallImg) {
     document.getElementById("imagebox").src = smallImg.src;
 }
 
+// shop catlog
+function updatePrice() {
+    document.getElementById("minPrice").value = document.getElementById("priceRange").value;
+}
+
+function updateSlider() {
+    document.getElementById("priceRange").value = document.getElementById("minPrice").value;
+}
+
+function toggleBrandList() {
+    const brands = ["Foxconn", "Hewlett Packard", "Huawei", "Panasonic", "Samsung", "Sony", "Toshiba", "Xiaomi"];
+    let brandList = document.getElementById("brandList");
+    let toggleBtn = document.getElementById("toggleBrands");
+
+    if (toggleBtn.innerText === "Show More") {
+        brands.forEach(brand => {
+            let div = document.createElement("div");
+            div.className = "form-check";
+            div.innerHTML = `<input class="form-check-input" type="checkbox" id="${brand.toLowerCase()}">
+                             <label class="form-check-label" for="${brand.toLowerCase()}">${brand}</label>`;
+            brandList.appendChild(div);
+        });
+        toggleBtn.innerText = "Show Less";
+    } else {
+        brandList.innerHTML = brandList.innerHTML.split('</div>').slice(0, 6).join('</div>') + '</div>';
+        toggleBtn.innerText = "Show More";
+    }
+}
+
+
+const minPrice = document.getElementById("minPrice");
+const maxPrice = document.getElementById("maxPrice");
+const minInput = document.getElementById("minInput");
+const maxInput = document.getElementById("maxInput");
+const progress = document.querySelector(".range-progress");
+
+function updateProgress() {
+    let minVal = parseInt(minPrice.value);
+    let maxVal = parseInt(maxPrice.value);
+    let minLimit = parseInt(minPrice.min);
+    let maxLimit = parseInt(maxPrice.max);
+
+    let left = ((minVal - minLimit) / (maxLimit - minLimit)) * 100;
+    let right = ((maxVal - minLimit) / (maxLimit - minLimit)) * 100;
+    progress.style.left = left + "%";
+    progress.style.width = (right - left) + "%";
+}
+
+function syncInputs() {
+    minInput.value = minPrice.value;
+    maxInput.value = maxPrice.value;
+    updateProgress();
+}
+
+function syncSliders() {
+    minPrice.value = minInput.value;
+    maxPrice.value = maxInput.value;
+    updateProgress();
+}
+
+minPrice.addEventListener("input", syncInputs);
+maxPrice.addEventListener("input", syncInputs);
+minInput.addEventListener("input", syncSliders);
+maxInput.addEventListener("input", syncSliders);
+
+updateProgress();

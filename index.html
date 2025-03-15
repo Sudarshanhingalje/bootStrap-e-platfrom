@@ -67,8 +67,7 @@
                     <button class="btn btn-outline-light btn-sm position-relative" data-bs-toggle="offcanvas"
                         data-bs-target="#shoppingCart">
                         <i class="bi bi-cart"></i>
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">3</span>
+                        <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
                     </button>
                 </div>
 
@@ -188,8 +187,8 @@
                                 <div class="submenu">
                                     <ul class="submenu-list list-unstyled">
                                         <li><a href="signin.html">Sign In</a></li>
-                                        <li><a href="#">Sign Up</a></li>
-                                        <li><a href="#">Password Recovery</a></li>
+                                        <li><a href="createaccount.html">Sign Up</a></li>
+                                        <li><a href="forget.html">Password Recovery</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -302,16 +301,18 @@
 
 
     <!-- Shopping Cart Offcanvas -->
-    <div class="offcanvas offcanvas-end text-bg-dark text-white" id="shoppingCart">
+    <div class="offcanvas offcanvas-end text-bg-dark  text-black bg-white" id="shoppingCart">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title text-white">Shopping Cart</h5>
+            <h5 class="offcanvas-title ">Shopping Cart</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
+        
         <div class="offcanvas-body d-flex flex-column text-white">
             <ul id="cart-items" class="list-group list-group-flush"></ul>
+            
             <hr>
             <p><strong>Total: $<span id="cart-total">0.00</span></strong><button class="btn btn-danger w-100 text-white"
-                    onclick="clearCart()">Clear Cart</button></p>
+                    onclick="clearCart()">Clear Cart</button></p><br>
 
 
             <button class="btn w-100 bg-body-secondary text-black">view Cart</button><br>
@@ -344,7 +345,7 @@
                             <h3 class="sub-heading mb-3 text-secondary fs-5">Feel the real quality of sound</h3>
                             <h1 class="main-heading fw-bold lh-1 display-4 display-md-3">Headphones</h1>
                             <h2 class="product-name fw-bold lh-1 display-5 display-md-4">ProMax</h2>
-                            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom"
+                            <a href="shopcatlog.html"
                                 class="btn btn-danger rounded py-2 px-4 mt-3 fs-5 fs-md-4">Shop now <i
                                     class="bi bi-cart4"></i></a>
                         </div>
@@ -365,7 +366,7 @@
                             <h3 class="sub-heading mb-3 text-secondary fs-5">Deal of the week</h3>
                             <h1 class="main-heading fw-bold lh-1 display-4 display-md-3">Powerful</h1>
                             <h2 class="product-name fw-bold lh-1 display-5 display-md-4">iPad Pro Max</h2>
-                            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom"
+                            <a href="shopcatlog.html"
                                 class="btn btn-danger rounded py-2 px-4 mt-3 fs-5 fs-md-4">Shop now <i
                                     class="bi bi-cart4"></i></a>
                         </div>
@@ -386,7 +387,7 @@
                             <h3 class="sub-heading mb-3 text-secondary fs-5">Virtual Reality Glasses</h3>
                             <h1 class="main-heading fw-bold lh-1 display-4 display-md-3">Experience</h1>
                             <h2 class="product-name fw-bold lh-1 display-5 display-md-4">New Reality</h2>
-                            <a href="https://github.com/Sudarshanhingalje/bootStrap-e-platfrom"
+                            <a href="shopcatlog.html"
                                 class="btn btn-danger rounded py-2 px-4 mt-3 fs-5 fs-md-4">Shop now <i
                                     class="bi bi-cart4"></i></a>
                         </div>
@@ -457,7 +458,7 @@
                     <img src="/images/shopcatlog/laptop.png" alt="MacBook" class="floating-img">
                     <h2 class="mt-3 fs-1">MacBook</h2>
                     <p class="opacity-75">Be Pro Anywhere</p>
-                    <a href="#" class="btn btn-custom">From $1,199 →</a>
+                    <a href="shopcatlog.html" class="btn btn-custom">From $1,199 →</a>
                 </div>
             </div>
 
@@ -872,143 +873,115 @@
 
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center">
-            <h3 class="fw-bold">Special offers for you</h3>
+            <h3 class="fw-bold">Special Offers for You</h3>
             <a href="#" class="text-muted underline-hover fw-bold">View all →</a>
         </div>
         <hr>
-        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
             <div class="carousel-inner">
-
-                <!-- Slide 1 -->
-                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
-                    <div class="carousel-inner">
-
-                       
-                        <div class="carousel-item active">
-                            <div class="row">
-                               
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/02(1).png" class="product-img img-fluid">
-                                        <h6>Apple iPhone 14 128GB White</h6>
-                                        <p class="price">$899.00 <s class="text-secondary">$999.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Apple iPhone 14 128GB White', 899.00,'images/products/02(1).png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/03.png" class="product-img img-fluid">
-                                        <h6>Smart Watch Series 7</h6>
-                                        <p class="price">$499.00 <s class="text-secondary">$799.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Smart Watch Series 7', 499.00, 'images/products/03.png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- VRB01 Virtual Reality Glasses -->
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/01(1).png" class="product-img img-fluid">
-                                        <h6>VRB01 Virtual Reality Glasses</h6>
-                                        <p class="price">$340.00 <s class="text-secondary">$430.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('VRB01 Virtual Reality Glasses', 340.00, 'images/products/01(1).png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Apple AirPods Pro 2 -->
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/06.png" class="product-img img-fluid">
-                                        <h6>Apple AirPods Pro 2</h6>
-                                        <p class="price">$224.00 <s class="text-secondary">$299.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Apple AirPods Pro 2', 224.00, 'images/products/06.png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/02(1).png" class="product-img img-fluid">
+                                <h6>Apple iPhone 14 128GB White</h6>
+                                <p class="price">$899.00 <s class="text-secondary">$999.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('Apple iPhone 14 128GB White', 899.00,'images/products/02(1).png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
                             </div>
                         </div>
-
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <!-- Wireless Earbuds -->
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/05.png" class="product-img img-fluid">
-                                        <h6>Wireless Earbuds</h6>
-                                        <p class="price">$199.00 <s class="text-secondary">$299.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Wireless Earbuds', 199.00,'images/products/05.png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Portable Speaker -->
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/16.png" class="product-img img-fluid">
-                                        <h6>Portable Speaker</h6>
-                                        <p class="price">$89.00 <s class="text-secondary">$129.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Portable Speaker',89.00,'images/products/16.png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Gaming Headset -->
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/08.png" class="product-img img-fluid">
-                                        <h6>Gaming Headset</h6>
-                                        <p class="price">$149.00 <s class="text-secondary">$199.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Gaming Headset',149.00,'images/products/08.png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Mechanical Keyboard -->
-                                <div class="col-md-3">
-                                    <div class="product-card p-3 rounded">
-                                        <img src="images/products/07.png" class="product-img img-fluid">
-                                        <h6>Mechanical Keyboard</h6>
-                                        <p class="price">$99.00 <s class="text-secondary">$149.00</s></p>
-                                        <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Mechanical Keyboard',99.00,'images/products/07.png')">
-                                            <i class="fas fa-shopping-cart"></i> Add to cart
-                                        </button>
-                                    </div>
-                                </div>
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/03.png" class="product-img img-fluid">
+                                <h6>Smart Watch Series 7</h6>
+                                <p class="price">$499.00 <s class="text-secondary">$799.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('Smart Watch Series 7', 499.00, 'images/products/03.png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
                             </div>
                         </div>
-
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/01(1).png" class="product-img img-fluid">
+                                <h6>VRB01 Virtual Reality Glasses</h6>
+                                <p class="price">$340.00 <s class="text-secondary">$430.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('VRB01 Virtual Reality Glasses', 340.00, 'images/products/01(1).png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/06.png" class="product-img img-fluid">
+                                <h6>Apple AirPods Pro 2</h6>
+                                <p class="price">$224.00 <s class="text-secondary">$299.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('Apple AirPods Pro 2', 224.00, 'images/products/06.png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Carousel Controls -->
-                    <button class="carousel-control-prev text-black" type="button" data-bs-target="#productCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon  " style="Color:Black"></span>
-                    </button>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/05.png" class="product-img img-fluid">
+                                <h6>Wireless Earbuds</h6>
+                                <p class="price">$199.00 <s class="text-secondary">$299.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('Wireless Earbuds', 199.00,'images/products/05.png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/16.png" class="product-img img-fluid">
+                                <h6>Portable Speaker</h6>
+                                <p class="price">$89.00 <s class="text-secondary">$129.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('Portable Speaker', 89.00,'images/products/16.png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/08.png" class="product-img img-fluid">
+                                <h6>Gaming Headset</h6>
+                                <p class="price">$149.00 <s class="text-secondary">$199.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('Gaming Headset', 149.00,'images/products/08.png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 p-2">
+                            <div class="product-card p-3 rounded">
+                                <img src="images/products/07.png" class="product-img img-fluid">
+                                <h6>Mechanical Keyboard</h6>
+                                <p class="price">$99.00 <s class="text-secondary">$149.00</s></p>
+                                <button class="cart-btn btn btn-success btn-sm"
+                                    onclick="addToCart('Mechanical Keyboard', 99.00,'images/products/07.png')">
+                                    <i class="fas fa-shopping-cart"></i> Add to cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </div>
     
