@@ -35,15 +35,15 @@ document.getElementById("catalogWithFilters").addEventListener("click", function
 });
 
 
-window.addEventListener("popstate", function (event) {
-    let catalogContainer = document.getElementById("catalogContainer");
-    if (event.state && event.state.page === "catalog") {
-        catalogContainer.classList.remove("d-none");
-        catalogContainer.scrollIntoView({ behavior: "smooth" });
-    } else {
-        catalogContainer.classList.add("d-none");
-    }
-});
+// window.addEventListener("popstate", function (event) {
+//     let catalogContainer = document.getElementById("catalogContainer");
+//     if (event.state && event.state.page === "catalog") {
+//         catalogContainer.classList.remove("d-none");
+//         catalogContainer.scrollIntoView({ behavior: "smooth" });
+//     } else {
+//         catalogContainer.classList.add("d-none");
+//     }
+// });
 
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -77,7 +77,7 @@ function updateCartUI() {
     let cartItems = document.getElementById("cart-items");
     let cartTotal = document.getElementById("cart-total");
 
-    if (!cartItems || !cartTotal) return; // Prevent errors if UI elements are missing
+    if (!cartItems || !cartTotal) return; 
 
     let total = 0;
     cartItems.innerHTML = "";
