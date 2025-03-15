@@ -33,17 +33,44 @@ document.getElementById("catalogWithFilters").addEventListener("click", function
             }, 100);
         });
 });
+window.addEventListener("popstate", function (event) {
+    let catalogContainer = document.getElementById("catalogContainer");
+    if (event.state && event.state.page === "catalog") {
+        catalogContainer.classList.remove("d-none");
+        catalogContainer.scrollIntoView({ behavior: "smooth" });
+    } else {
+        catalogContainer.classList.add("d-none");
+    }
+});
+
+// home page cateries
+document.getElementById("shopcatogery").addEventListener("click", function (event) {
+    event.preventDefault();
+    let shopcatogerycontainer = document.getElementById("shopcatogerycontainer");
+
+    fetch("shopcatogery.html")
+        .then(response => response.text())
+        .then(data => {
+            shopcatogerycontainer.innerHTML = data;
+            shopcatogerycontainer.classList.remove("d-none");
+            window.history.pushState({ page: "catalog" }, "", "#catalog");
+
+            setTimeout(() => {
+                shopcatogerycontainer.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        });
+});
 
 
-// window.addEventListener("popstate", function (event) {
-//     let catalogContainer = document.getElementById("catalogContainer");
-//     if (event.state && event.state.page === "catalog") {
-//         catalogContainer.classList.remove("d-none");
-//         catalogContainer.scrollIntoView({ behavior: "smooth" });
-//     } else {
-//         catalogContainer.classList.add("d-none");
-//     }
-// });
+window.addEventListener("popstate", function (event) {
+    let shopcatogerycontainer = document.getElementById("shopcatogerycontainer");
+    if (event.state && event.state.page === "catalog") {
+        shopcatogerycontainer.classList.remove("d-none");
+        shopcatogerycontainer.scrollIntoView({ behavior: "smooth" });
+    } else {
+        shopcatogerycontainer.classList.add("d-none");
+    }
+});
 
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];

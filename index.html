@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/singleproduct.css">
 
+
+
+
+
 </head>
 
 <body>
@@ -73,7 +77,20 @@
 
 
 
-            <!-- ******************************************************navbar ******************************************************************************************** -->
+            <div id="categories-header"></div>
+            
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ************************************************************************************************************************************************** -->
 
             <div class="col d-flex justify-content-center">
                 <ul class="nav ">
@@ -103,10 +120,8 @@
 
                                         <div class="col-md-3">
                                             <h6 class="dropdown-header text-black">Electronics Store</h6>
-                                            <a class="dropdown-item text-black" href="#breadcrumb-section">Categories
-                                                Page</a>
-                                            <a class="dropdown-item text-black" href="#" id="catalogWithFilters">Catalog
-                                                with Side Filters</a>
+                                            <a class="dropdown-item text-black" href="#" id="shopcatogery">Categories Page</a>
+                                            <a class="dropdown-item text-black" href="#" id="catalogWithFilters">Catalog with Side Filters</a>
 
                                             <a class="dropdown-item text-black" href="#">Product General Info</a>
                                             <a class="dropdown-item text-black" href="#">Product Details</a>
@@ -391,10 +406,11 @@
 
 
     <!-- ********************************************home  caltlog********************************************************************     -->
+    <div id="shopcatogerycontainer" class="d-none"></div>
 
 
+    <div id="catalogContainer" class="d-none"></div>
 
-    <!-- <div id="catalogContainer" class="d-none"></div> -->
     <!-- ********************************************home -catogeries********************************************************************* -->
     <div class="container mt-3">
         <div class="row justify-content-center">
@@ -494,7 +510,7 @@
                 <div class="container mt-4">
                     <div class="d-flex justify-content-between align-items-center">
                         <h3 class="fw-bold">Trending products</h3>
-                        <a href="categoery.html" class="text-muted underline-hover fw-bold">View all →</a>
+                        <a href="#" class="text-muted underline-hover fw-bold">View all →</a>
                     </div>
                     <hr>
                 </div>
@@ -867,30 +883,29 @@
                 <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
                     <div class="carousel-inner">
 
-                        <!-- Slide 1 -->
+                       
                         <div class="carousel-item active">
                             <div class="row">
-                                <!-- Apple iPhone 14 -->
+                               
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/02(1).png" class="product-img img-fluid">
+                                        <img src="images/products/02(1).png" class="product-img img-fluid">
                                         <h6>Apple iPhone 14 128GB White</h6>
                                         <p class="price">$899.00 <s class="text-secondary">$999.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Apple iPhone 14 128GB White', 899.00, '/images/products/02(1).png')">
+                                            onclick="addToCart('Apple iPhone 14 128GB White', 899.00,'images/products/02(1).png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
                                 </div>
 
-                                <!-- Smart Watch Series 7 -->
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/03.png" class="product-img img-fluid">
+                                        <img src="images/products/03.png" class="product-img img-fluid">
                                         <h6>Smart Watch Series 7</h6>
                                         <p class="price">$499.00 <s class="text-secondary">$799.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Smart Watch Series 7', 499.00, '/images/products/03.png')">
+                                            onclick="addToCart('Smart Watch Series 7', 499.00, 'images/products/03.png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
@@ -899,11 +914,11 @@
                                 <!-- VRB01 Virtual Reality Glasses -->
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/01(1).png" class="product-img img-fluid">
+                                        <img src="images/products/01(1).png" class="product-img img-fluid">
                                         <h6>VRB01 Virtual Reality Glasses</h6>
                                         <p class="price">$340.00 <s class="text-secondary">$430.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('VRB01 Virtual Reality Glasses', 340.00, '/images/products/01(1).png')">
+                                            onclick="addToCart('VRB01 Virtual Reality Glasses', 340.00, 'images/products/01(1).png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
@@ -912,11 +927,11 @@
                                 <!-- Apple AirPods Pro 2 -->
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/06.png" class="product-img img-fluid">
+                                        <img src="images/products/06.png" class="product-img img-fluid">
                                         <h6>Apple AirPods Pro 2</h6>
                                         <p class="price">$224.00 <s class="text-secondary">$299.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Apple AirPods Pro 2', 224.00, '/images/products/06.png')">
+                                            onclick="addToCart('Apple AirPods Pro 2', 224.00, 'images/products/06.png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
@@ -930,11 +945,11 @@
                                 <!-- Wireless Earbuds -->
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/05.png" class="product-img img-fluid">
+                                        <img src="images/products/05.png" class="product-img img-fluid">
                                         <h6>Wireless Earbuds</h6>
                                         <p class="price">$199.00 <s class="text-secondary">$299.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Wireless Earbuds', 199.00,'/images/products/05.png')">
+                                            onclick="addToCart('Wireless Earbuds', 199.00,'images/products/05.png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
@@ -943,11 +958,11 @@
                                 <!-- Portable Speaker -->
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/16.png" class="product-img img-fluid">
+                                        <img src="images/products/16.png" class="product-img img-fluid">
                                         <h6>Portable Speaker</h6>
                                         <p class="price">$89.00 <s class="text-secondary">$129.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Portable Speaker',89.00,'/images/products/16.png')">
+                                            onclick="addToCart('Portable Speaker',89.00,'images/products/16.png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
@@ -956,11 +971,11 @@
                                 <!-- Gaming Headset -->
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/08.png" class="product-img img-fluid">
+                                        <img src="images/products/08.png" class="product-img img-fluid">
                                         <h6>Gaming Headset</h6>
                                         <p class="price">$149.00 <s class="text-secondary">$199.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Gaming Headset',149.00,'/images/products/08.png')">
+                                            onclick="addToCart('Gaming Headset',149.00,'images/products/08.png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
@@ -969,11 +984,11 @@
                                 <!-- Mechanical Keyboard -->
                                 <div class="col-md-3">
                                     <div class="product-card p-3 rounded">
-                                        <img src="/images/products/07.png" class="product-img img-fluid">
+                                        <img src="images/products/07.png" class="product-img img-fluid">
                                         <h6>Mechanical Keyboard</h6>
                                         <p class="price">$99.00 <s class="text-secondary">$149.00</s></p>
                                         <button class="cart-btn btn btn-success btn-sm ms-auto"
-                                            onclick="addToCart('Mechanical Keyboard',99.00,'/images/products/07.png')">
+                                            onclick="addToCart('Mechanical Keyboard',99.00,'images/products/07.png')">
                                             <i class="fas fa-shopping-cart"></i> Add to cart
                                         </button>
                                     </div>
@@ -996,47 +1011,48 @@
             </div>
         </div>
     </div>
+    
 
-
-
-    <div class="container py-4">
-        <div class="row justify-content-center g-3">
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="brand-box">
-                    <img src="/images/brandNames/apple.svg" alt="Apple">
-                </div>
+   
+<div class="container py-4">
+    <div class="row justify-content-center g-3">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="brand-box">
+                <img src="/images/brandNames/apple.svg" alt="Apple">
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="brand-box">
-                    <img src="/images/brandNames/motorola.svg" alt="Motorola">
-                </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="brand-box">
+                <img src="/images/brandNames/motorola.svg" alt="Motorola">
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="brand-box">
-                    <img src="/images/brandNames/canon.svg" alt="Canon">
-                </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="brand-box">
+                <img src="/images/brandNames/canon.svg" alt="Canon">
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="brand-box">
-                    <img src="/images/brandNames/samsung.svg" alt="Samsung">
-                </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="brand-box">
+                <img src="/images/brandNames/samsung.svg" alt="Samsung">
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="brand-box">
-                    <img src="/images/brandNames/sony.svg" alt="Sony">
-                </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="brand-box">
+                <img src="/images/brandNames/sony.svg" alt="Sony">
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="brand-box fw-bold text-center">
-                    <a href="shopcatlog.html" class="brand-box d-flex align-items-center justify-content-center">
-                        All Brands ➕
-                    </a>
-                </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="brand-box fw-bold text-center">
+                <a href="shopcatlog.html" class="brand-box d-flex align-items-center justify-content-center">
+                    All Brands ➕
+                </a>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- **********************************************************end home page************************************************************ -->
+<!-- **********************************************************end home page************************************************************ -->
+
 
 
 
