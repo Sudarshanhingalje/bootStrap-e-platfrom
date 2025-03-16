@@ -72,6 +72,37 @@ window.addEventListener("popstate", function (event) {
     }
 });
 
+
+
+//shopping cart view 
+document.getElementById("shopping-cart").addEventListener("click", function (event) {
+    event.preventDefault();
+    let shopcatogerycontainer = document.getElementById("shopping-cart-home");
+
+    fetch("shoppingcart.html")
+        .then(response => response.text())
+        .then(data => {
+            shopcatogerycontainer.innerHTML = data;
+            shopcatogerycontainer.classList.remove("d-none");
+            window.history.pushState({ page: "catalog" }, "", "#catalog");
+
+            setTimeout(() => {
+                shopcatogerycontainer.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        });
+});
+
+
+window.addEventListener("popstate", function (event) {
+    let shopcatogerycontainer = document.getElementById("shopping-cart-home");
+    if (event.state && event.state.page === "catalog") {
+        shopcatogerycontainer.classList.remove("d-none");
+        shopcatogerycontainer.scrollIntoView({ behavior: "smooth" });
+    } else {
+        shopcatogerycontainer.classList.add("d-none");
+    }
+});
+
 // adding and deleting element from the cart
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -99,36 +130,7 @@ function addToCart(productName, price, imageSrc = "/images/default.png") {
     cartToast.show();
 }
 
-// Function to update the cart UI
-// function updateCartUI() {
-//     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-//     let cartItems = document.getElementById("cart-items");
-//     let cartTotal = document.getElementById("cart-total");
 
-//     if (!cartItems || !cartTotal) return; 
-
-//     let total = 0;
-//     cartItems.innerHTML = "";
-
-//     cart.forEach(item => {
-//         total += item.price * item.quantity;
-//         cartItems.innerHTML += `
-//             <li class="list-group-item d-flex justify-content-between align-items-center">
-//                 <img src="${item.image}" alt="${item.name}" class="cart-img me-2" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
-//                 <div>
-//                     <strong>${item.name}</strong><br>
-//                     <span class="text-black">$${(item.price * item.quantity).toFixed(2)}</span> (x${item.quantity})
-//                 </div>
-//                 <div class="d-flex gap-2">
-//                     <button class="btn btn-sm btn-success" onclick="increaseQuantity('${item.name}')">+</button>
-//                     <button class="btn btn-sm btn-warning" onclick="decreaseQuantity('${item.name}')">-</button>
-//                     <button class="btn btn-sm btn-danger" onclick="removeFromCart('${item.name}')">❌</button>
-//                 </div>
-//             </li>`;
-//     });
-
-//     cartTotal.innerText = total.toFixed(2);
-// }
 
 
 // Function to increase product quantity
@@ -300,3 +302,6 @@ minInput.addEventListener("input", syncSliders);
 maxInput.addEventListener("input", syncSliders);
 
 updateProgress();
+
+
+

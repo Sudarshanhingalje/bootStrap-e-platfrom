@@ -646,3 +646,31 @@ html {
     max-height: 150px;
     object-fit: contain;
 }
+.sale-banner {
+    background-color: #212529; /* Dark background */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+}
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ff4d6d; /* Red color for icon */
+    margin-right: 10px;
+}
+.sale-text {
+    font-size: 18px;
+}
+.sale-title {
+    font-weight: bold;
+    font-size: 20px;
+}

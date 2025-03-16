@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/singleproduct.css">
+    <style>
+        .cart-box {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-img {
+            max-width: 80px;
+            height: auto;
+        }
+
+        .remove-btn {
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+
+<body >
+
+    <div class="container mt-4" id="shopping-cart">
+        <h3 class="fw-bold">Shopping Cart</h3>
+        <div class="row">
+            <div class="col-lg-8">
+                <div id="cart-container"></div>
+                <ul id="cart-items" class="list-group list-group-flush"></ul>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="cart-box">
+                    <h5 class="fw-bold">Order Summary</h5>
+                    <div class="d-flex justify-content-between">
+                        <span>Subtotal (<span id="total-items">0</span> items):</span>
+                        <span>$<span id="cart-total">0.00</span></span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Estimated Total:</span>
+                        <span>$<span id="cart-total">0.00</span></span>
+                    </div>
+                    <button type="button" class="btn btn-danger w-100 mt-3" onclick="window.location.href='checkout.html';">
+                        Proceed to Checkout
+                    </button>
+                    
+                </div>
+
+                <div class="cart-box mt-3">
+                    <h6 class="fw-bold">Apply Promo Code</h6>
+                    <div class="input-group">
+                        <input type="text" id="promo-code" class="form-control" placeholder="Enter promo code">
+                        <button class="btn btn-primary" onclick="applyDiscount()">Apply</button>
+                    </div>
+                    <p class="text-success mt-2" id="discount-message"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="special-offers-container"></div>
+    <div id="footer-placeholder"></div>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateCartUI();
+        });
+        window.addEventListener("storage", function () {
+            updateCartUI();
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let storedOffers = localStorage.getItem("specialOffers");
+
+            if (storedOffers) {
+                document.getElementById("special-offers-container").innerHTML = storedOffers;
+            } else {
+                console.error("No special offers found in localStorage.");
+            }
+        });
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -47,15 +47,26 @@
                         <span class="text-white fw-bold fs-4 d-none d-sm-block">Trendora</span>
                     </a>
                 </div>
-
-                <!-- Center: Search Bar -->
-                <div class="col-lg-6 col-md-5 d-none d-md-flex justify-content-center">
-                    <div class="input-group" style="max-width: 300px;margin-left: 20px;">
+            
+                <!-- Center: Search Bar & Super Sale Banner Inline -->
+                <div class="col-lg-6 col-md-5 d-none d-md-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 300px; margin-right: 20px;">
                         <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
                         <input type="text" class="form-control" placeholder="Search products" style="font-size: 12px;">
                     </div>
+            
+                    <!-- Super Sale Banner (Inline) -->
+                    <div class="sale-banner d-flex align-items-center ms-3 p-2">
+                        <div class="icon-circle">
+                            &#37; <!-- Percentage symbol -->
+                        </div>
+                        <div>
+                            <div class="sale-text">Only this month</div>
+                            <div class="sale-title">Super Sale 20%</div>
+                        </div>
+                    </div>
                 </div>
-
+            
                 <!-- Right: Icons -->
                 <div class="col-lg-4 col-md-4 col-6 d-flex justify-content-end">
                     <a href="signin.html" class="btn btn-outline-light btn-sm me-2">
@@ -70,7 +81,7 @@
                         <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
                     </button>
                 </div>
-
+            
             </div>
 
 
@@ -150,7 +161,7 @@
 
                                         <div class="col-md-3">
                                             <h6 class="dropdown-header text-black">Checkout v.1</h6>
-                                            <a class="dropdown-item text-black" href="#">Shopping Cart</a>
+                                            <a class="dropdown-item text-black" href="#" id="shopping-cart">Shopping Cart</a>
                                             <a class="dropdown-item text-black" href="#">Delivery Info (Step 1)</a>
                                             <a class="dropdown-item text-black" href="#">Delivery Info (Step 2)</a>
                                             <a class="dropdown-item text-black" href="#">Shipping Address</a>
@@ -301,21 +312,23 @@
 
 
     <!-- Shopping Cart Offcanvas -->
-    <div class="offcanvas offcanvas-end text-bg-dark  text-black bg-white" id="shoppingCart">
+    <div class="offcanvas offcanvas-end text-bg-dark  text-black bg-white" id="shoppingCart" style="Width:600px;" >
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title ">Shopping Cart</h5>
+            <i class="bi bi-basket "></i>
+            <h2 class="offcanvas-title ps-4 fontawesome fw-bold ">Shopping Cart</h2>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         
-        <div class="offcanvas-body d-flex flex-column text-white">
+        <div class="offcanvas-body d-flex flex-column text-black">
             <ul id="cart-items" class="list-group list-group-flush"></ul>
             
             <hr>
-            <p><strong>Total: $<span id="cart-total">0.00</span></strong><button class="btn btn-danger w-100 text-white"
-                    onclick="clearCart()">Clear Cart</button></p><br>
+            <p class="fs-3"><strong>Total: $<span id="cart-total">0.00</span><button class="btn btn-danger w-100 text-white"
+                onclick="clearCart()">Clear Cart</button></strong></p><br>
+                <a href="shoppingcart.html" id="shopping-cart" class="btn w-100 bg-body-secondary text-black">View Cart</a>
 
 
-            <button class="btn w-100 bg-body-secondary text-black">view Cart</button><br>
+            <!-- <button class="btn w-100 bg-body-secondary text-black" onclick="window.location.href='shoppingcart.html'">view Cart</button> -->
             <hr>
             <button class="btn w-100 bg-success text-white" onclick="window.location.href='checkout.html'">
                 Checkout
@@ -323,12 +336,20 @@
         </div>
     </div>
 
+    <!-- ********************************************home  caltlog********************************************************************     -->
+    <div id="shopcatogerycontainer" class="d-none"></div>
+
+
+    <div id="catalogContainer" class="d-none"></div>
+    <div id="shopping-cart-home" class="d-none"></div>
+
+    
+
+    <!-- ********************************************home -catogeries********************************************************************* -->
 
 
 
-
-    <!-- *********************************************************************************************************************************************** -->
-
+    
     <section id="productCarousel" class="carousel slide py-5 px-md-5 px-5" data-bs-ride="carousel">
         <div class="carousel-inner rounded-5" style="background-color: #9bbffa; padding: 0px 8px;">
             <div class="carousel-indicators">
@@ -404,15 +425,8 @@
     </section>
 
 
+   <!-- *********************************************************************************************************************************************** -->
 
-
-    <!-- ********************************************home  caltlog********************************************************************     -->
-    <div id="shopcatogerycontainer" class="d-none"></div>
-
-
-    <div id="catalogContainer" class="d-none"></div>
-
-    <!-- ********************************************home -catogeries********************************************************************* -->
     <div class="container mt-3">
         <div class="row justify-content-center">
             <div class="col-6 col-md-3">
@@ -511,7 +525,7 @@
                 <div class="container mt-4">
                     <div class="d-flex justify-content-between align-items-center">
                         <h3 class="fw-bold">Trending products</h3>
-                        <a href="#" class="text-muted underline-hover fw-bold">View all →</a>
+                        <a href="shopcatlog.html" class="text-muted underline-hover fw-bold">View all →</a>
                     </div>
                     <hr>
                 </div>
@@ -871,7 +885,7 @@
 
 
 
-    <div class="container mt-4">
+    <div class="container mt-4" id="offer-page" >
         <div class="d-flex justify-content-between align-items-center">
             <h3 class="fw-bold">Special Offers for You</h3>
             <a href="#" class="text-muted underline-hover fw-bold">View all →</a>
@@ -1057,11 +1071,19 @@
         window.addEventListener("storage", function () {
             updateCartUI();
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+        let specialOffersSection = document.getElementById("offer-page");
+        
+        if (specialOffersSection) {
+            localStorage.setItem("specialOffers", specialOffersSection.outerHTML);
+        }
+    });
     </script>
 
 
 
-    <script src="language.js"></script>
+    
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

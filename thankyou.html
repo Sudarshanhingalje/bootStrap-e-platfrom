@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .coupon-box {
+            background: #d4edda;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .coupon-box input {
+            width: 70%;
+            display: inline-block;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .btn-copy {
+            background: #000;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h3><span class="glyphicon glyphicon-ok text-success"></span> Thank you for your order!</h3>
+                    <p><strong>Order #234000</strong></p>
+                    <p><strong>Delivery:</strong> 567 Cherry Souse Lane, Sacramento, 95829</p>
+                    <p><strong>Time:</strong> Sunday, May 9, 12:00 - 14:00</p>
+                    <p><strong>Payment:</strong> Visa **** **** **** 8395</p>
+
+                    <div class="coupon-box">
+                        <h4>🎉 Congratulations! 30% off your new purchase!</h4>
+                        <p>Use the coupon now or look for it in your personal account.</p>
+                        <input type="text" class="form-control" value="30%SALEOFF" readonly>
+                        <button class="btn btn-copy">Copy coupon</button>
+                    </div>
+
+                    <p>Need help? <a href="#">Contact us</a></p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h4>You may also like</h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="product-card">
+                            <img src="images/products/01(1).png" class="img-responsive">
+                            <p>VRB01 Virtual Reality Glasses</p>
+                            <p><strong>$340.99</strong> <del>$430.00</del></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="product-card">
+                            <img src="images/products/01.png" class="img-responsive">
+                            <p>Apple iPhone 14 128GB Blue</p>
+                            <p><strong>$899.00</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-danger btn-block" onclick="window.location.href='index.html'">Continue shopping</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
